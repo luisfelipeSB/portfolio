@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luís Felipe Baptista | Developer</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css"
+        integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheets/bg_style.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div id='background'>
+        <div class='wave -one'></div>
+        <div class='wave -two'></div>
+        <div class='wave -three'></div>
+    </div>
+
+    <!-- Frosted glass panel -->
+    <div id="panel">
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button"
+                    role="tab" aria-controls="about" aria-selected="true">About Me</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects"
+                    type="button" role="tab" aria-controls="projects" aria-selected="false">Projects</button>
+            </li>
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content" id="myTabContent">
+
+            <!-- About Me -->
+            <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+                <div class="row content">
+                    <div class="col-md-5 order-md-2 justify-content-center">
+                        <div class="row justify-content-center mb-3"><img src="assets/pfpic.jpeg" id="pfpic"
+                                alt="p,rofile picture"></div>
+                        <h3 class="text-center">Luís Felipe Baptista</h3>
+                        <div class="row">
+                            <a href="assets/CV.pdf" class="col text-center fa fa-cv"
+                                title="Resumé"><strong>CV</strong></a>
+                            <a href="https://www.linkedin.com/in/luis-felipe-baptista"
+                                class="col text-center fab fa-linkedin" title="LinkedIn"></a>
+                            <a href="https://github.com/luisfelipeSB" class="col text-center fab fa-github"
+                                title="GitHub"></a>
+                            <a href="https://www.hackerrank.com/lfs_baptista1" class="col text-center fab fa-hackerrank"
+                                title="HackerRank"></a>
+                        </div>
+                        <div class="row text-center mt-2"><a
+                                href="mailto: lfs.baptista1@hotmail.com">lfs.baptista1@hotmail.com</a></div>
+                    </div>
+                    <div class="col-md-7 order-md-1 my-auto text-center" id="intro-paragraph">
+                        <p>Hi! &#128075 Welcome to my website. I am a Brazilian computer science student and avid
+                            metalhead
+                            currently living in Lisbon, Portugal. <strong>Open to work as a full-stack web and
+                                app developer. </strong> I love programming and have some experience with most
+                            modern development technologies (see my CV.) Some of my other areas of interest besides
+                            web/app development inclide AI, blockchain, and cybersecurity. I am always reading up the
+                            latest tech news and papers, and am constantly looking out for new technologies to explore
+                            and projects to take on. Thank you for visiting my site! &#129312
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+                <div class="row content">
+
+                    <!-- List group -->
+                    <div class="col-md-4 order-md-1 justify-content-center">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active" id="list-mycardio"
+                                data-bs-toggle="list" href="#list-MyCardio" role="tab">
+                                &#129728 My Cardio
+                            </a>
+                            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-GOT"
+                                role="tab">
+                                &#127939 Get Out There!
+                            </a>
+                            <a class="list-group-item list-group-item-action" data-bs-toggle="list"
+                                href="#list-PullPrizes" role="tab">
+                                &#127922 Pull Prizes
+                            </a>
+                            <a class="list-group-item list-group-item-action" data-bs-toggle="list"
+                                href="#list-AppGarden" role="tab">
+                                &#127969 Garden Market
+                            </a>
+                            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-ASOCS"
+                                role="tab">
+                                &#128218 A Summary of CS
+                            </a>
+                            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-Future"
+                                role="tab">
+                                &#127961 Smart Cities (Essay)
+                            </a>
+                            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-Cataclysm"
+                                role="tab">
+                                &#127912 Cataclysm (Art)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tab panes -->
+                    <div class="col-md-8 order-md-2 justify-content-center">
+                        <div class="tab-content" id="nav-tabContent">
+
+                            <!-- MyCardio -->
+                            <div class="tab-pane fade show active" id="list-MyCardio" role="tabpanel">
+                                <div class="proj-header">
+                                    <img src="assets/images/my-cardio/icon.png" alt="MyCardio icon">
+                                    <h3>MyCardio</h3>
+                                </div>
+                                <h4>A university project (Work in progress!)</h4>
+                                <p class="proj-description">
+                                    A cardiac health tracking app for patients in one of Lisbon's hospitals, with
+                                    visualization and risk detection features. Risks are classified by a trained
+                                    recurrent neural network classifier. Built using Flutter, Node.js, PostgreSQL,
+                                    and Tensorflow. Built in collaboration with Hugo Duarte, and Teresa Mesquita and
+                                    Mayra Duarte as the design team.
+                                </p>
+                                <div class="row proj-gallery">
+                                    <img class="img-fluid col-md-4 my-1" src="assets/images/my-cardio/my-cardio.jpeg"   alt="App screenshot 1">
+                                    <img class="img-fluid col-md-4 my-1" src="assets/images/my-cardio/my-cardio-2.jpeg" alt="App screenshot 2">
+                                    <img class="img-fluid col-md-4 my-1" src="assets/images/my-cardio/my-cardio-3.jpeg" alt="App screenshot 3">
+                                </div>
+                                <ul>
+                                    <li><a href="https://github.com/luisfelipeSB/my_cardio">GitHub repo</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- GOT -->
+                            <div class="tab-pane fade" id="list-GOT" role="tabpanel">
+                                <div class="proj-header">
+                                    <img src="assets/images/get-out-there/icon.png" alt="GOT icon">
+                                    <h3>GetOutThere</h3>
+                                </div>
+                                <h4>A university project</h4>
+                                <p class="proj-description">
+                                    A running/exercise web application that lets you plan your runs across the city,
+                                    save circuits, join teams, score points, and compete! Built with JS, HTML, CSS +
+                                    Bootstrap, Mapquest, Node.js, and PostgreSQL. Built in collaboration with Felipe
+                                    Gomes, and William Santana.
+                                </p>
+                                <div class="row proj-gallery">
+                                    <img src="assets/images/get-out-there/running.png" class="col-md-9 mobile-only" alt="Get Out There app screenshot">
+                                    <img src="assets/images/get-out-there/screenshot.png" class="col-md-9 desktp-only" alt="Get Out There page screenshot">
+                                </div>
+                                <ul>
+                                    <li><a href="https://get-out-there-app.herokuapp.com/">Get Out There!</a></li>
+                                    <li><a href="https://github.com/WillianSantaAna/get_out_there">GitHub repo</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- PullPrizes-->
+                            <div class="tab-pane fade" id="list-PullPrizes" role="tabpanel">
+                                <div class="proj-header">
+                                    <img src="assets/images/pull-prizes/icon.png" alt="PP icon">
+                                    <h3>Pull Prizes</h3>
+                                </div>
+                                <h4>A university project</h4>
+                                <p class="proj-description">
+                                    A simple "table" game where the board is a graph (nodes and edges), and you
+                                    must <i>pull prizes</i> towards your home node to win. You play against your
+                                    computer running the minimax algorithm, optionally with forward pruning. It can also
+                                    be played against another human. Written in p5.js. Play it now!
+                                </p>
+                                <div class="proj-gallery">
+                                    <img src="assets/images/pull-prizes/graphs.png" class="col-12" alt="Pull Prizes graphs">
+                                </div>
+                                <ul>
+                                    <li><a href="https://editor.p5js.org/Luis_Felipe/full/6M1kUhg6d">Against the AI</a>
+                                    </li>
+                                    <li><a href="https://editor.p5js.org/Luis_Felipe/full/XQAa6c5u6">Against another
+                                            player</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- AppGarden -->
+                            <div class="tab-pane fade" id="list-AppGarden" role="tabpanel">
+                                <h3>Garden Market</h3>
+                                <h4>A university project</h4>
+                                <p class="proj-description">
+                                    A <i>very</i> simple e-commerce web application for buying/selling goceries produced
+                                    in urban environments. The idea here was to create a platform to incetivize urban
+                                    farming, and shorten the length of produce supply chains. Built with vanilla JS,
+                                    HTML, CSS, SpringBoot, and MySQL.
+                                </p>
+                                <ul>
+                                    <li><a href="https://gardenmarket.herokuapp.com/">Get shopping!</a></li>
+                                    <li><a href="https://github.com/luisfelipeSB/GardenMarket">GitHub repo</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- ASOCS -->
+                            <div class="tab-pane fade" id="list-ASOCS" role="tabpanel">
+                                <h3>A Summary of Computer Science</h3>
+                                <h4>A personal project</h4>
+                                <p class="proj-description">
+                                    Having developed a taste for reading computer science textbooks (now my favorite
+                                    kind of literature!) over the course of my CS degree, I decided to compile the most
+                                    important parts of some of the ones I read, in order to quickly refer to their
+                                    knowledge, and help me retain their information over the years. I now share theses
+                                    summaries with you. Please buy the books if you find them useful!
+                                </p>
+                                <ul>
+                                    <li><a
+                                            href="https://drive.google.com/drive/folders/1axWVUTxnBOn7ZDoI4EDi0NoBHrkLrAYO?usp=sharing">Start
+                                            reading</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Future -->
+                            <div class="tab-pane fade" id="list-Future" role="tabpanel">
+                                <h3>A Hypothetical Society of the Future</h3>
+                                <h4>A personal project</h4>
+                                <p class="proj-description">
+                                    If we could rebuild all of our institutions, infrastructures, and systems today from
+                                    scratch, knowing what we know now, could we do it better? Would we do it
+                                    differently? I give one interpretation of how everything could be different in this
+                                    long creative essay.
+                                </p>
+                                <ul>
+                                    <li><a href="assets/Future.pdf">Read the 1st Chapter</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Cataclysm -->
+                            <div class="tab-pane fade" id="list-Cataclysm" role="tabpanel">
+                                <h3>Cataclysm</h3>
+                                <h4>A personal project</h4>
+                                <p class="proj-description">
+                                    A series of digital artworks. Just because.
+                                </p>
+                                <div class="row proj-gallery">
+                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/The Mistress of the Amazon 1.png" alt="">
+                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/The Mistress of the Amazon 2.png" alt="">
+                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/Kalopsia 1.png" alt="">
+                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/Kalopsia 2.png" alt="">
+                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/Nemesis 1.png" alt="">
+                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/Nemesis 2.png" alt="">
+                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/Summon the Fire 1.png" alt="">
+                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/Summon the Fire 2.png" alt="">
+                                </div>
+                                <ul>
+                                    <li><a href="https://drive.google.com/drive/folders/16mcIp8xEzs4yucRQrYfmnUcgh_RvNT2c?usp=sharing">Download in HD</a></li>
+                                </ul>
+                            </div>
+
+                            <!--
+                                <h3>Title</h3>
+                                <h4>Subtitle</h4>
+                                <p>
+                                    Description
+                                </p>
+                                <a href="">Link</a>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap Bundle with Popper-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

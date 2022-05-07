@@ -1,0 +1,160 @@
+@font-face {
+  font-family: lexendDeca;
+  src: url("../assets/LexendDeca-Regular.ttf");
+}
+
+body {
+  background: linear-gradient(#2aaf8e, #4277eb);
+  font-family: lexendDeca;
+}
+
+#background,
+#panel 
+#intro {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#background {
+  z-index: -1;
+}
+
+#panel {
+  z-index: 1;
+  margin: 10%;
+  background-color: #c5c5c54d;
+  backdrop-filter: blur(7px);
+  border-radius: 20px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.content {
+  padding: 2.5em;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+/* Large displays */
+@media screen and (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Small displays */
+@media screen and (max-width: 768px) {
+  .desktp-only {
+    display: none;
+  }
+
+  #nav-tabContent,
+  #intro-paragraph {
+    padding: 1em;
+    padding-top: 2em;
+  }
+}
+
+/*---------- ABOUT ME TAB ----------*/
+
+#pfpic {
+  padding: 0%;
+  border-radius: 20px;
+  width: 150px;
+}
+
+.fa,
+.fab {
+  padding: 0.5em 0;
+  font-size: large;
+  text-decoration: none;
+  margin: .2em 0.2em;
+  border-radius: 10px;
+}
+
+a:hover {
+  color: white;
+}
+
+.fa-cv {
+  background: #51ac77;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: #161b22;
+  color: white;
+}
+
+.fa-hackerrank {
+  background: #1ba94c;
+  color: white;
+}
+
+/*---------- PROJECTS TAB ----------*/
+
+.list-group {
+  border-radius: 15px;
+}
+
+.list-group-item {
+  background: #ffffff4f;
+}
+
+.list-group-item:hover {
+  background-color: #ffffffcc;
+}
+
+.list-group-item.active {
+  background: #007bb5;
+  border: none;
+}
+
+.proj-header img {
+  float: left;
+  width: auto;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.proj-img-reel {
+  padding: 1em 0;
+}
+
+.proj-img-reel img {
+  height: 100%;
+  width: 100%;
+}
+
+/* Large displays */
+@media screen and (min-width: 768px) {
+  .proj-img-reel img {
+    padding: 0 0.3em;
+    max-height: 70px;
+    width: auto;
+  }
+}
+
+/* Small displays */
+@media screen and (max-width: 768px) {
+  .proj-description {
+    text-align: left;
+  }
+}
+
+.proj-gallery {
+  padding-bottom: 1em;
+}
