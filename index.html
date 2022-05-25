@@ -25,10 +25,19 @@
 <body>
 
     <!-- Background -->
-    <div id='background'>
-        <div class='wave -one'></div>
-        <div class='wave -two'></div>
-        <div class='wave -three'></div>
+    <div id="background" class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
 
     <!-- Frosted glass panel -->
@@ -72,7 +81,7 @@
                     <div class="col-md-7 order-md-1 my-auto text-center" id="intro-paragraph">
                         <p>Hi! &#128075 Welcome to my website. I am a Brazilian computer science student and avid
                             metalhead currently living in Lisbon, Portugal. <strong>Open to work as a full-stack web and
-                                app developer. </strong> I love programming and have some experience with most
+                                app developer. </strong> I enjoy programming and have some experience with most
                             modern development technologies (see my CV.) Some of my other areas of interest besides
                             web/app development include artificial intelligence, distributed systems, and computer
                             security. I am always reading up the latest tech news and papers, and constantly looking out
@@ -99,12 +108,12 @@
                                 &#127939 Get Out There!
                             </a>
                             <a class="list-group-item list-group-item-action" data-bs-toggle="list"
-                                href="#list-PullPrizes" role="tab">
-                                &#127922 Pull Prizes
-                            </a>
-                            <a class="list-group-item list-group-item-action" data-bs-toggle="list"
                                 href="#list-AppGarden" role="tab">
                                 &#127969 Garden Market
+                            </a>
+                            <a class="list-group-item list-group-item-action" data-bs-toggle="list"
+                                href="#list-PullPrizes" role="tab">
+                                &#127922 Pull Prizes
                             </a>
                             <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-ASOCS"
                                 role="tab">
@@ -132,12 +141,16 @@
                                     <h3>MyCardio</h3>
                                 </div>
                                 <h4>A university project (Work in progress!)</h4>
+                                <div class="proj-links">
+                                    <a href="https://github.com/luisfelipeSB/my_cardio"
+                                        class="col text-center btn btn-dark my-2 code-link">CODE</a>
+                                </div>
                                 <p class="proj-description">
                                     A cardiac health tracking app for patients in one of Lisbon's hospitals, with
-                                    visualization and risk detection features. Risks are classified by a trained
-                                    recurrent neural network. Built using Flutter, Node.js, PostgreSQL,
-                                    and Tensorflow. Built in collaboration with Hugo Duarte, and Teresa Mesquita and
-                                    Mayra Duarte as the design team.
+                                    visualization and risk alert features. Accompanied by a web appl made for
+                                    nurses to visualize and tag patient health data with risks Built using Flutter,
+                                    Node.js, PostgreSQL. Built in collaboration with Hugo Duarte (programming), and
+                                    Teresa Mesquita and Mayra Duarte (design, UI/UX).
                                 </p>
                                 <div class="row proj-gallery">
                                     <img class="img-fluid col-md-4 my-1" src="assets/images/my-cardio/my-cardio.jpeg"
@@ -147,9 +160,15 @@
                                     <img class="img-fluid col-md-4 my-1" src="assets/images/my-cardio/my-cardio-3.jpeg"
                                         alt="App screenshot 3">
                                 </div>
-                                <ul>
-                                    <li><a href="https://github.com/luisfelipeSB/my_cardio">GitHub repo</a></li>
-                                </ul>
+                                <h5>Technologies used:</h5>
+                                <div class="row tools-icons justify-content-center">
+                                    <img class="img-fluid col-md-4 my-2" src="assets/tool_icons/nodejs.png"
+                                        alt="NodeJS">
+                                    <img class="img-fluid col-md-4 my-2" src="assets/tool_icons/postgres.png"
+                                        alt="PostgreSQL">
+                                    <img class="img-fluid col-md-4 my-2" src="assets/tool_icons/flutter.png"
+                                        alt="Flutter">
+                                </div>
                             </div>
 
                             <!-- GOT -->
@@ -159,6 +178,12 @@
                                     <h3>GetOutThere</h3>
                                 </div>
                                 <h4>A university project</h4>
+                                <div class="proj-links">
+                                    <a href="https://github.com/WillianSantaAna/get_out_there"
+                                        class="col text-center btn btn-dark my-2 code-link">CODE</a>
+                                    <a href="https://get-out-there-app.herokuapp.com"
+                                        class="col text-center btn btn-info my-2 mx-2 code-link">TRY IT!</a>
+                                </div>
                                 <p class="proj-description">
                                     A running/exercise web application that lets you plan your runs across the city,
                                     save circuits, join teams, score points, and compete! Built with JS, HTML, CSS +
@@ -171,10 +196,44 @@
                                     <img src="assets/images/get-out-there/screenshot.png" class="col-md-9 desktp-only"
                                         alt="Get Out There page screenshot">
                                 </div>
-                                <ul>
-                                    <li><a href="https://get-out-there-app.herokuapp.com/">Get Out There!</a></li>
-                                    <li><a href="https://github.com/WillianSantaAna/get_out_there">GitHub repo</a></li>
-                                </ul>
+                                <h5>Technologies used:</h5>
+                                <div class="row tools-icons justify-content-center">
+                                    <img class="img-fluid col-md-4 my-2" src="assets/tool_icons/nodejs.png"
+                                        alt="NodeJS">
+                                    <img class="img-fluid col-md-4 my-2" src="assets/tool_icons/postgres.png"
+                                        alt="PostgreSQL">
+                                    <img class="img-fluid col-md-4 my-2" src="assets/tool_icons/frontend.png"
+                                        alt="Frontend technologies">
+                                    <img class="img-fluid col-md-4 my-2" src="assets/tool_icons/bootstrap.png"
+                                        alt="Bootstrap">
+                                </div>
+                            </div>
+
+                            <!-- AppGarden -->
+                            <div class="tab-pane fade" id="list-AppGarden" role="tabpanel">
+                                <h3>Garden Market</h3>
+                                <h4>A university project</h4>
+                                <div class="proj-links">
+                                    <a href="https://gardenmarket.herokuapp.com/"
+                                        class="col text-center btn btn-dark my-2 code-link">CODE</a>
+                                    <a href="https://github.com/luisfelipeSB/GardenMarket"
+                                        class="col text-center btn btn-info my-2 mx-2 code-link">TRY IT!</a>
+                                </div>
+                                <p class="proj-description">
+                                    A <i>very</i> simple e-commerce web application for buying/selling goceries produced
+                                    in urban environments. The idea here was to create a platform to incetivize urban
+                                    farming, and shorten the length of produce supply chains. Built with vanilla JS,
+                                    HTML, CSS, SpringBoot, and MySQL.
+                                </p>
+                                <h5>Technologies used:</h5>
+                                <div class="row tools-icons justify-content-center">
+                                    <img class="img-fluid col-md-4 my-2" src="assets/tool_icons/spring.png"
+                                        alt="NodeJS">
+                                    <img class="img-fluid col-md-4 my-2" src="assets/tool_icons/mysql.png"
+                                        alt="PostgreSQL">
+                                    <img class="img-fluid col-md-4 my-2" src="assets/tool_icons/frontend.png"
+                                        alt="Frontend technologies">
+                                </div>
                             </div>
 
                             <!-- PullPrizes-->
@@ -199,22 +258,6 @@
                                     </li>
                                     <li><a href="https://editor.p5js.org/Luis_Felipe/full/XQAa6c5u6">Against another
                                             player</a></li>
-                                </ul>
-                            </div>
-
-                            <!-- AppGarden -->
-                            <div class="tab-pane fade" id="list-AppGarden" role="tabpanel">
-                                <h3>Garden Market</h3>
-                                <h4>A university project</h4>
-                                <p class="proj-description">
-                                    A <i>very</i> simple e-commerce web application for buying/selling goceries produced
-                                    in urban environments. The idea here was to create a platform to incetivize urban
-                                    farming, and shorten the length of produce supply chains. Built with vanilla JS,
-                                    HTML, CSS, SpringBoot, and MySQL.
-                                </p>
-                                <ul>
-                                    <li><a href="https://gardenmarket.herokuapp.com/">Get shopping!</a></li>
-                                    <li><a href="https://github.com/luisfelipeSB/GardenMarket">GitHub repo</a></li>
                                 </ul>
                             </div>
 
@@ -278,7 +321,7 @@
                                 </div>
                                 <ul>
                                     <li><a
-                                            href="https://drive.google.com/drive/folders/16mcIp8xEzs4yucRQrYfmnUcgh_RvNT2c?usp=sharing">Download
+                                            href="https://drive.google.com/drive/folders/16mcIp8xEzs4yucRQrYfmnUcgh_RvNT2c?usp=sharing">See
                                             in HD</a></li>
                                 </ul>
                             </div>
