@@ -22,6 +22,7 @@ body {
   z-index: 1;
   margin: 10%;
   background-color: #c5c5c54d;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   border-radius: 20px;
 }
