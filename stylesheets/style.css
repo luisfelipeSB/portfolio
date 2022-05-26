@@ -150,6 +150,10 @@ a:hover {
     max-height: 70px;
     width: auto;
   }
+  
+  .tools-icons {
+	float:left;
+  }
 }
 
 /* Small displays */
@@ -164,6 +168,6 @@ a:hover {
 }
 
 .tools-icons img {
-  max-height: 7em;
-  max-width: 7em;
+  max-height: 6em;
+  max-width: 6em;
 }
