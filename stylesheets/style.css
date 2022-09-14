@@ -112,6 +112,11 @@ a:hover {
   color: white;
 }
 
+.card {
+  border-radius: 1em;
+  background-color: #c5c5c581;
+}
+
 /*---------- PROJECTS TAB ----------*/
 
 .list-group {
