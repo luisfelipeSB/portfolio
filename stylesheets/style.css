@@ -8,8 +8,7 @@ body {
 }
 
 #background,
-#panel 
-#intro {
+#panel #intro {
   grid-column: 1;
   grid-row: 1;
 }
@@ -39,7 +38,7 @@ body {
   padding: 2.5em;
 }
 
-a { 
+a {
   color: #161b22;
 }
 
@@ -112,9 +111,45 @@ a:hover {
   color: white;
 }
 
+/* Vertical timeline */
+#experience-cards {
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Vertical timeline ruler */
+#experience-cards::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background-color: lightgray;
+  top: 0;  
+  left: -15px;
+  bottom: 0;
+  border-radius: 5px;
+}
+
+/* Vertical timeline circle */
+.experience::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 3px solid lightgray;
+  top: 15px;
+  left: -22px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
 .card {
   border-radius: 1em;
-  background-color: #c5c5c581;
+  background-color: #c5c5c580;
+}
+
+.company-logo {
+  border-radius: 50%;
 }
 
 /*---------- PROJECTS TAB ----------*/
@@ -136,7 +171,7 @@ a:hover {
   border: none;
 }
 
-.proj-header img {
+.header-with-icon img {
   float: left;
   width: auto;
   height: 30px;
@@ -163,9 +198,9 @@ a:hover {
     max-height: 70px;
     width: auto;
   }
-  
+
   .tools-icons {
-	float:left;
+    float: left;
   }
 }
 
