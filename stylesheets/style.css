@@ -46,7 +46,7 @@ h3 {
   font-weight: bold;
 }
 
-.readMore {
+.read-more {
   border-radius: 15px !important;
 }
 
@@ -148,8 +148,19 @@ a:hover {
   background-color: #c5c5c580;
 }
 
+.card-text {
+  font-size: small;
+}
+
 .company-logo {
   border-radius: 50%;
+}
+
+/* Small displays */
+@media screen and (max-width: 768px) {
+  #email {
+    font-size: 2.8vw;
+  }
 }
 
 /*---------- PROJECTS TAB ----------*/
@@ -171,7 +182,17 @@ a:hover {
   border: none;
 }
 
-.header-with-icon img {
+.proj-class-header {
+  font-weight: bold;
+}
+
+.proj-class-hr {
+  border: none;
+  height: 2px !important;
+  background-color: #000000;
+}
+
+.proj-title img {
   float: left;
   width: auto;
   height: 30px;
@@ -216,6 +237,6 @@ a:hover {
 }
 
 .tools-icons img {
-  max-height: 6em;
-  max-width: 6em;
+  max-height: 5em;
+  max-width: 5em;
 }

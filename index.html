@@ -26,18 +26,28 @@
 
     <!-- Background -->
     <div id="background" class="area">
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+        <ul class="squares">
         </ul>
+        <script>
+            // Creating the floating squares background effect
+            // Works with a set of list items with CSS styles applied
+            const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+            let N_SQUARES = 10
+            let squares = document.querySelector('#background.area .squares')
+            for (let i = 0; i < N_SQUARES; i++) {
+                let li = document.createElement('li')
+                let li_left = rand(0, 100) + '%'
+                let li_size = rand(20, 150) + 'px'
+                let li_anim_delay = rand(0, 20) + 's'
+                let li_anim_durat = rand(12, 35) + 's'
+                li.style.setProperty('left', li_left);
+                li.style.setProperty('width', li_size);
+                li.style.setProperty('height', li_size);
+                li.style.setProperty('animation-delay', li_anim_delay);
+                li.style.setProperty('animation-duration', li_anim_durat);
+                squares.appendChild(li)
+            }
+        </script>
     </div>
 
     <!-- Frosted glass panel -->
@@ -64,11 +74,12 @@
 
                     <!-- Contact, Links -->
                     <div class="col-md-5 order-md-2 justify-content-center">
-                        <div class="row justify-content-center mb-3"><img src="assets/pfpic-pro.jpg" id="pfpic"
-                                alt="profile picture"></div>
+                        <div class="row justify-content-center mb-3">
+                            <img src="assets/pfpic-pro.jpg" id="pfpic" alt="profile picture">
+                        </div>
                         <h3 class="text-center">Luís Felipe Baptista</h3>
                         <div class="row justify-content-center">
-                            <a href="assets/CV.pdf" class="col-2 text-center mx-2 fa fa-cv"
+                            <a href="assets/documents/CV.pdf" class="col-2 text-center mx-2 fa fa-cv"
                                 title="Resumé"><strong>CV</strong></a>
                             <a href="https://www.linkedin.com/in/luis-felipe-saraiva-baptista"
                                 class="col-2 text-center mx-2 fab fa-linkedin" title="LinkedIn"></a>
@@ -77,8 +88,10 @@
                             <a href="https://www.hackerrank.com/lfs_baptista1"
                                 class="col-2 text-center mx-2 fab fa-hackerrank" title="HackerRank"></a>
                         </div>
-                        <div class="row text-center mt-2"><a
-                                href="mailto: luis.felipe.saraiva.baptista@outlook.com">luis.felipe.saraiva.baptista@outlook.com</a>
+                        <div class="row text-center text-wrap mt-2">
+                            <a href="mailto: luis.felipe.saraiva.baptista@outlook.com" id="email">
+                                luis.felipe.saraiva.baptista@outlook.com
+                            </a>
                         </div>
                     </div>
 
@@ -90,30 +103,32 @@
 
                             <!-- Capabilities -->
                             <div id="aboutme-capabilities" class="col-lg-7 mb-4 pe-5">
-                                <div class="header-with-icon">
+                                <div class="proj-title">
                                     <img src="assets/icon-tools.png" alt="Capabilities icon">
                                     <h4><strong>Capabilities</strong></h4>
                                 </div>
                                 <div class="row mt-3">
                                     <h6><strong>Cybersecurity</strong></h6>
                                     <ul class="ms-4">
-                                        <li>Security tester & ethical hacker</li>
-                                        <li>Microsoft enterprise security associate (certified)</li>
-                                        <li>Security operations analyst</li>
+                                        <li>Cybersecurity architecture</li>
+                                        <li>Vulnerability assessment</li>
+                                        <li>Compliance assessment</li>
+                                        <li>Penetration testing</li>
+                                        <li>Incident response</li>
                                     </ul>
                                 </div>
                                 <div class="row">
                                     <h6><strong>Other Interests</strong></h6>
                                     <div class="col">
-                                        <ul class="ps-4">
-                                            <li>Data Analysis</li>
-                                            <li>Web/App Dev</li>
+                                        <ul class="ps-4 pe-0">
+                                            <li>Azure Cloud</li>
+                                            <li>Blockchain</li>
                                         </ul>
                                     </div>
                                     <div class="col">
-                                        <ul class="ps-4">
-                                            <li>Cloud (Azure)</li>
-                                            <li>Blockchain</li>
+                                        <ul class="ps-4 pe-0">
+                                            <li>AI / ML</li>
+                                            <li>DevOps</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -121,34 +136,38 @@
 
                             <!-- Experience -->
                             <div id="aboutme-experience" class="col-lg-5 mb-2">
-                                <div class="header-with-icon">
+                                <div class="proj-title">
                                     <img src="assets/icon-experience.png" alt="Experience icon">
                                     <h4><strong>Experience</strong></h4>
                                 </div>
                                 <div id="experience-cards">
                                     <div class="experience card rounded-4 my-3" style="max-width: 18rem;">
                                         <div class="card-body">
-                                            <div class="header-with-icon">
+                                            <div class="proj-title">
                                                 <img src="assets/company_logos/avanade.png" class="company-logo"
                                                     alt="Avanade logo">
                                                 <h5 class="card-title"><strong>Avanade</strong></h5>
                                             </div>
+                                            <h7 class="card-subtitle text-muted">
+                                                Sep 2022 - Sep 2023
+                                            </h7>
                                             <p class="card-text">
-                                                Sep 2022 - Present <br>
                                                 Sr. Assoc. Cyber Defense
                                             </p>
                                         </div>
                                     </div>
                                     <div class="experience card rounded-4 my-3" style="max-width: 18rem;">
                                         <div class="card-body">
-                                            <div class="header-with-icon">
+                                            <div class="proj-title">
                                                 <img src="assets/company_logos/ntt-data.png" class="company-logo"
                                                     alt="NTT Data logo">
                                                 <h5 class="card-title"><strong>NTT Data</strong></h5>
                                             </div>
+                                            <h7 class="card-subtitle text-muted">
+                                                Jul 2022 - Sep 2022
+                                            </h7>
                                             <p class="card-text">
-                                                Jul 2022 - Sep 2022 <br>
-                                                Summer WebDev Intern
+                                                Summer DevOps Intern
                                             </p>
                                         </div>
                                     </div>
@@ -157,22 +176,23 @@
                         </div>
 
                         <!-- Introductory Paragraph -->
-                        <button class="btn btn-dark btn-sm my-0 readMore" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#readMore" aria-expanded="false" aria-controls="readMore" style="top:-5em">
+                        <button class="btn btn-dark btn-sm my-0 read-more" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#read-more" aria-expanded="false" aria-controls="read-more"
+                            style="top:-5em">
                             Read More ▾
                         </button>
-                        <div class="collapse mt-4" id="readMore">
+                        <div class="collapse mt-4" id="read-more">
                             <p>
                                 Hi! &#128075 My name is Luís, welcome to my website! I am a Brazilian cybersecurity
                                 analyst currently living in Lisbon, Portugal. I enjoy solving problems and working with
                                 modern defensive computer security technologies, but have always been interested in
-                                other areas of computer engineering as well, including data analysis, web/app
-                                development, cloud, and blockchain. In my spare time, I'm usually either cooking,
-                                reading or writing, enjoying the beach, or going to music concerts (mostly Metal and Samba).
-                                I'm always up to date with the latest tech news and papers, and constantly looking out for
-                                new technologies to explore and projects to take on. I aspire to one day return to my
-                                home city of Rio and help improve its information and communications technology
-                                infrastructure. Thank you for visiting my website! &#129312
+                                other areas of computer engineering as well, including devops, cloud, data analysis, and
+                                blockchain. In my spare time, I'm usually either cooking, reading or writing, enjoying
+                                the beach, or going to music concerts (mostly Metal and Samba). I'm always up to date
+                                with the latest tech news and papers, and constantly looking out for new technologies to
+                                explore and projects to take on. I aspire to one day return to my home city of Rio and
+                                help improve its information and communications technology infrastructure. Thank you for
+                                visiting my website! &#129312
                             </p>
                         </div>
                     </div>
@@ -187,36 +207,28 @@
                     <div class="col-md-4 order-md-1 justify-content-center">
                         <div class="list-group" id="list-tab" role="tablist">
                             <a class="list-group-item list-group-item-action active" data-bs-toggle="list"
-                                href="#list-Snirh21" role="tab">
-                                &#128167 SNIRH 21
+                                href="#list-PRSN-Book" role="tab">
+                                ⭐ Technoland
                             </a>
                             <a class="list-group-item list-group-item-action" data-bs-toggle="list"
-                                href="#list-MyCardio" role="tab">
-                                &#129728 My Cardio
-                            </a>
-                            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-GOT"
-                                role="tab">
-                                &#127939 Get Out There!
+                                href="#list-PROF-Internships" role="tab">
+                                🧑‍💻 Internships
                             </a>
                             <a class="list-group-item list-group-item-action" data-bs-toggle="list"
-                                href="#list-AppGarden" role="tab">
-                                &#127969 Garden Market
+                                href="#list-ACAD-University" role="tab">
+                                🎓 University
                             </a>
                             <a class="list-group-item list-group-item-action" data-bs-toggle="list"
-                                href="#list-PullPrizes" role="tab">
-                                &#127922 Pull Prizes
-                            </a>
-                            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-ASOCS"
-                                role="tab">
-                                &#128218 A Summary of CS
-                            </a>
-                            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-Future"
-                                role="tab">
-                                &#127961 Smart Cities (Book)
+                                href="#list-PRSN-Summaries" role="tab">
+                                📚 Summaries
                             </a>
                             <a class="list-group-item list-group-item-action" data-bs-toggle="list"
-                                href="#list-Cataclysm" role="tab">
-                                &#127912 Cataclysm (Art)
+                                href="#list-PRSN-Games" role="tab">
+                                🎲 Games
+                            </a>
+                            <a class="list-group-item list-group-item-action" data-bs-toggle="list"
+                                href="#list-PRSN-Art" role="tab">
+                                🎨 Art
                             </a>
                         </div>
                     </div>
@@ -225,200 +237,10 @@
                     <div class="col-md-8 order-md-2 justify-content-center">
                         <div class="tab-content" id="nav-tabContent">
 
-                            <!-- Snirh21 -->
-                            <div class="tab-pane fade show active" id="list-Snirh21" role="tabpanel">
-                                <div class="header-with-icon">
-                                    <img src="assets/images/snirh21/icon.png" alt="Snirh21 icon">
-                                    <h3>SNIRH21</h3>
-                                </div>
-                                <h4>A project for NTT Data</h4>
-                                <div class="proj-links">
-                                    <a href="" class="col text-center btn btn-info my-2 code-link">WEBSITE</a>
-                                </div>
-                                <p class="proj-description">
-                                    An IoT sensor network monitoring web application I contributed to as an intern web
-                                    developer while at NTT Data. We used Lando to develop a Drupal website connected to
-                                    existing sensor networks at the Tagus river and its tributaries (within Portugal),
-                                    complete with features for analyzing and transforming the collected data. The
-                                    SNIRH21
-                                    project was comissioned by Portugal's Environmental Protection Agency (Agência
-                                    Portuguêsa do Ambiente - APA). It was a multi-year project encompassing several
-                                    teams and I was fortunate enough to contribute to it as a front-end developer for
-                                    two months as my first professional experience.
-                                </p>
-                                <h5>Technologies used:</h5>
-                                <div class="row tools-icons justify-content-center">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/drupal.png"
-                                        alt="NodeJS">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/postgres.png"
-                                        alt="PostgreSQL">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/bootstrap.png"
-                                        alt="Flutter">
-                                </div>
-                            </div>
-
-                            <!-- MyCardio -->
-                            <div class="tab-pane fade" id="list-MyCardio" role="tabpanel">
-                                <div class="header-with-icon">
-                                    <img src="assets/images/my-cardio/icon.png" alt="MyCardio icon">
-                                    <h3>My Cardio</h3>
-                                </div>
-                                <h4>A university project</h4>
-                                <div class="proj-links">
-                                    <a href="https://github.com/luisfelipeSB/my_cardio"
-                                        class="col text-center btn btn-dark my-2 code-link">CODE</a>
-                                </div>
-                                <p class="proj-description">
-                                    A health tracking mobile application for patients in the cardiac health wing of one
-                                    of Lisbon's hospitals, with data visualization and risk alert features. Accompanied
-                                    by a web application made for nurses to visualize and tag patient health data with
-                                    risk patterns. Built using Flutter, Node.js + Express, PostgreSQL. Built in
-                                    collaboration with Hugo Duarte (programming), and Teresa Mesquita and Mayra Duarte
-                                    (design, UI/UX).
-                                </p>
-                                <div class="row proj-gallery">
-                                    <img class="img-fluid col-md-4 my-1" src="assets/images/my-cardio/my-cardio.png"
-                                        alt="App screenshot 1">
-                                    <img class="img-fluid col-md-4 my-1" src="assets/images/my-cardio/my-cardio-2.png"
-                                        alt="App screenshot 2">
-                                    <img class="img-fluid col-md-4 my-1" src="assets/images/my-cardio/my-cardio-3.png"
-                                        alt="App screenshot 3">
-                                </div>
-                                <h5>Technologies used:</h5>
-                                <div class="row tools-icons justify-content-center">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/nodejs.png"
-                                        alt="NodeJS">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/postgres.png"
-                                        alt="PostgreSQL">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/flutter.png"
-                                        alt="Flutter">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/bootstrap.png"
-                                        alt="Bootstrap">
-                                </div>
-                            </div>
-
-                            <!-- GetOutThere -->
-                            <div class="tab-pane fade" id="list-GOT" role="tabpanel">
-                                <div class="header-with-icon">
-                                    <img src="assets/images/get-out-there/icon.png" alt="GOT icon">
-                                    <h3>Get Out There</h3>
-                                </div>
-                                <h4>A university project</h4>
-                                <div class="proj-links">
-                                    <a href="https://github.com/WillianSantaAna/get_out_there"
-                                        class="col text-center btn btn-dark my-2 code-link">CODE</a>
-                                    <a href="https://get-out-there-app.herokuapp.com"
-                                        class="col text-center btn btn-info my-2 ms-1 code-link">WEBSITE</a>
-                                </div>
-                                <p class="proj-description">
-                                    A fitness web application that lets you plan your runs across the city,
-                                    save circuits, join teams, score points, and compete! Built with JS, HTML, CSS +
-                                    Bootstrap, Mapquest, Node.js, and PostgreSQL. Built in collaboration with Felipe
-                                    Gomes, and William Santana.
-                                </p>
-                                <div class="row proj-gallery">
-                                    <img src="assets/images/get-out-there/running.png" class="col-md-9 mobile-only"
-                                        alt="Get Out There app screenshot">
-                                    <img src="assets/images/get-out-there/screenshot.png" class="col-md-9 desktp-only"
-                                        alt="Get Out There page screenshot">
-                                </div>
-                                <h5>Technologies used:</h5>
-                                <div class="row tools-icons justify-content-center">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/nodejs.png"
-                                        alt="NodeJS">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/postgres.png"
-                                        alt="PostgreSQL">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/frontend.png"
-                                        alt="Frontend technologies">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/bootstrap.png"
-                                        alt="Bootstrap">
-                                </div>
-                            </div>
-
-                            <!-- AppGarden -->
-                            <div class="tab-pane fade" id="list-AppGarden" role="tabpanel">
-                                <h3>Garden Market</h3>
-                                <h4>A university project</h4>
-                                <div class="proj-links">
-                                    <a href="https://github.com/luisfelipeSB/GardenMarket"
-                                        class="col text-center btn btn-dark my-2 code-link">CODE</a>
-                                    <a href="https://gardenmarket.herokuapp.com/"
-                                        class="col text-center btn btn-info my-2 ms-1 code-link">WEBSITE</a>
-                                </div>
-                                <p class="proj-description">
-                                    An e-commerce web application for buying/selling goceries produced
-                                    in urban environments. The idea here was to create a platform to incetivize urban
-                                    farming, and shorten the length of produce supply chains. Built with vanilla JS,
-                                    HTML, CSS, SpringBoot, and MySQL.
-                                </p>
-                                <h5>Technologies used:</h5>
-                                <div class="row tools-icons justify-content-center">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/spring.png"
-                                        alt="NodeJS">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/mysql.png"
-                                        alt="PostgreSQL">
-                                    <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/frontend.png"
-                                        alt="Frontend technologies">
-                                </div>
-                            </div>
-
-                            <!-- PullPrizes-->
-                            <div class="tab-pane fade" id="list-PullPrizes" role="tabpanel">
-                                <div class="header-with-icon">
-                                    <img src="assets/images/pull-prizes/icon.png" alt="PP icon">
-                                    <h3>Pull Prizes</h3>
-                                </div>
-                                <h4>A university project</h4>
-                                <p class="proj-description">
-                                    A computer game developed in my artificial intelligence class where the board is a
-                                    graph (made of nodes and edges), and you must <i>pull prizes</i> in the board
-                                    towards your home node to win. You can play against your computer running the
-                                    minimax algorithm, optionally with forward pruning. You can also against another
-                                    human if you want. Written in p5.js.
-                                </p>
-                                <div class="proj-gallery">
-                                    <img src="assets/images/pull-prizes/graphs.png" class="col-12"
-                                        alt="Pull Prizes graphs">
-                                </div>
-                                <div class="row text-center mt-3">
-                                    <a href="https://editor.p5js.org/Luis_Felipe/full/6M1kUhg6d">Start Playing (AI)</a>
-                                </div>
-                                <div class="row text-center mt-3">
-                                    <a href="https://editor.p5js.org/Luis_Felipe/full/6M1kUhg6d">Start Playing (2P)</a>
-                                </div>
-                            </div>
-
-                            <!-- SummaryOfCS -->
-                            <div class="tab-pane fade" id="list-ASOCS" role="tabpanel">
-                                <h3>A Summary of Computer Science</h3>
-                                <h4>A personal project</h4>
-                                <p class="proj-description">
-                                    Having developed a taste for reading computer science textbooks (now my favorite
-                                    kind of literature!) over the course of my CS degree, I decided to compile the most
-                                    important parts of some of the ones I read, in order to quickly refer to their
-                                    knowledge, and help me retain their information over the years. I now share theses
-                                    summaries with you. Please buy the books if you find them useful!
-                                </p>
-                                <div class="row proj-gallery">
-                                    <img class="img-fluid col-md-4 my-1" src="assets/images/summary-of-cs/README-01.png"
-                                        alt="Title page screenshot">
-                                    <img class="img-fluid col-md-4 my-1" src="assets/images/summary-of-cs/README-04.png"
-                                        alt="Contents page screenshot">
-                                    <img class="img-fluid col-md-4 my-1" src="assets/images/summary-of-cs/README-17.png"
-                                        alt="Intro page screenshot">
-                                </div>
-                                <div class="row text-center mt-3">
-                                    <a
-                                        href="https://drive.google.com/drive/folders/1axWVUTxnBOn7ZDoI4EDi0NoBHrkLrAYO?usp=sharing">
-                                        Start reading
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- Future -->
-                            <div class="tab-pane fade" id="list-Future" role="tabpanel">
-                                <h3>Smart Cities of the Future</h3>
-                                <h4>A personal project</h4>
+                            <!-- PRSN-Technoland -->
+                            <div class="tab-pane fade show active" id="list-PRSN-Book" role="tabpanel">
+                                <h3>Technoland</h3>
+                                <h5>A personal project</h5>
                                 <p class="proj-description">
                                     If we could rebuild all of our institutions, infrastructures, and information
                                     systems today from scratch, with modern technologies, knowing what we know now,
@@ -426,56 +248,467 @@
                                     how everything could be different in this book.
                                 </p>
                                 <div class="row proj-gallery">
-                                    <img class="img-fluid col-md-4 my-1" src="assets/images/future/Future-01.png"
+                                    <img class="img-fluid col-md-4 my-1"
+                                        src="assets/images/projects/technoland/screenshot_1.png"
                                         alt="Title page screenshot">
-                                    <img class="img-fluid col-md-4 my-1" src="assets/images/future/Future-02.png"
+                                    <img class="img-fluid col-md-4 my-1"
+                                        src="assets/images/projects/technoland/screenshot_2.png"
                                         alt="Contents page screenshot">
-                                    <img class="img-fluid col-md-4 my-1" src="assets/images/future/Future-05.png"
+                                    <img class="img-fluid col-md-4 my-1"
+                                        src="assets/images/projects/technoland/screenshot_3.png"
                                         alt="Intro page screenshot">
                                 </div>
                                 <div class="row text-center mt-3">
-                                    <a href="assets/Future.pdf">Start Reading</a>
+                                    <a
+                                        href="https://drive.google.com/file/d/14HSmYnQFZD-uTD5IZlTy59HuXCb_aXvc/view?usp=sharing">Start
+                                        Reading</a>
                                 </div>
                             </div>
 
-                            <!-- Cataclysm -->
-                            <div class="tab-pane fade" id="list-Cataclysm" role="tabpanel">
-                                <h3>Cataclysm</h3>
-                                <h4>A personal project</h4>
-                                <p class="proj-description">
-                                    A series of digital artworks. Just because.
-                                </p>
-                                <div class="row proj-gallery">
-                                    <img class="col-md-6 col-lg-3 my-1"
-                                        src="assets/images/cataclysm/The Mistress of the Amazon 1.png"
-                                        alt="The Mistress of the Amazon 1">
-                                    <img class="col-md-6 col-lg-3 my-1"
-                                        src="assets/images/cataclysm/The Mistress of the Amazon 2.png"
-                                        alt="The Mistress of the Amazon 2">
-                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/Kalopsia 1.png"
-                                        alt="Kalopsia 1">
-                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/Kalopsia 2.png"
-                                        alt="Kalopsia 2">
-                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/Nemesis 1.png"
-                                        alt="Nemesis 1">
-                                    <img class="col-md-6 col-lg-3 my-1" src="assets/images/cataclysm/Nemesis 2.png"
-                                        alt="Nemesis 2">
-                                    <img class="col-md-6 col-lg-3 my-1"
-                                        src="assets/images/cataclysm/Summon the Fire 1.png" alt="Summon the Fire 1">
-                                    <img class="col-md-6 col-lg-3 my-1"
-                                        src="assets/images/cataclysm/Summon the Fire 2.png" alt="Summon the Fire 2">
+                            <!-- PROF-Internships -->
+                            <div class="tab-pane fade" id="list-PROF-Internships" role="tabpanel">
+                                <h2 class="proj-class-header">Internship projects</h2>
+                                <hr class="proj-class-hr"><br>
+
+                                <!-- BUPi -->
+                                <div class="row" id="PROF-Internships-Avanade-BUPi">
+                                    <div class="proj-title">
+                                        <img src="assets/images/projects/internships/bupi/icon.png" alt="BUPi icon">
+                                        <h3>BUPi</h3>
+                                    </div>
+                                    <h5>A project for Avanade</h5>
+                                    <div class="proj-links">
+                                        <a href="https://bupi.gov.pt/"
+                                            class="col text-center btn btn-info my-2 code-link">WEBSITE</a>
+                                    </div>
+                                    <p class="proj-description">
+                                        An infrastructure operations project for a client in the public services sector
+                                        - Portugal's Institute of Registrars and Notaries (IRN), part of the Ministry of
+                                        Justice. Contributed as one of the Azure cloud operators. My role involved
+                                        managing users, servers, networks, automations, dashboards, and security
+                                        controls. Also contributed as one of the solution architects in a subsequent
+                                        phase of the project.
+                                    </p>
+                                    <h5>Technologies used:</h5>
+                                    <div class="row tools-icons">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/azure.png"
+                                            alt="Azure">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/azuread.png"
+                                            alt="Azure Active Directory">
+                                    </div>
                                 </div>
-                                <div class="row text-center mt-3">
-                                    <a
-                                        href="https://drive.google.com/drive/folders/16mcIp8xEzs4yucRQrYfmnUcgh_RvNT2c?usp=sharing">
-                                        See in HD
-                                    </a>
+
+                                <br>
+                                <hr><br>
+
+                                <!-- SNIRH21 -->
+                                <div class="row" id="PROF-Internships-NTTData-SNIRH21">
+                                    <div class="proj-title">
+                                        <img src="assets/images/projects/internships/snirh21/icon.png"
+                                            alt="SNIRH21 icon">
+                                        <h3>SNIRH21</h3>
+                                    </div>
+                                    <h5>A project for NTT Data</h5>
+                                    <div class="proj-links">
+                                        <a href="" class="col text-center btn btn-info my-2 code-link">WEBSITE</a>
+                                    </div>
+                                    <p class="proj-description">
+                                        A web development project for a client in the public services sector -
+                                        Portugal's Environmental Protection Agency (APA), part of the Ministry of the
+                                        Environment. Contributed as an intern web developer. My role involved developing
+                                        the front-end of the platform for aggregating data from an IoT sensor networks
+                                        in the Tagus river for a unified monitoring portal.
+                                    </p>
+                                    <h5>Technologies used:</h5>
+                                    <div class="row tools-icons">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/drupal.png"
+                                            alt="Drupal">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/bootstrap.png"
+                                            alt="Flutter">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ACAD-University -->
+                            <div class="tab-pane fade" id="list-ACAD-University" role="tabpanel">
+                                <h2 class="proj-class-header">University projects</h2>
+                                <hr class="proj-class-hr"><br>
+
+                                <!-- Final project -->
+                                <div class="row" id="ACAD-University-FinalProject">
+                                    <div class="proj-title">
+                                        <img src="assets/images/projects/university/final-project/icon.png"
+                                            alt="My Cardio icon">
+                                        <h3>My Cardio</h3>
+                                    </div>
+                                    <h5>Final project</h5>
+                                    <div class="proj-links">
+                                        <a href="https://github.com/luisfelipeSB/my_cardio"
+                                            class="col text-center btn btn-dark my-2 code-link">CODE</a>
+                                        <a href="https://github.com/luisfelipeSB/my_cardio/blob/main/Documents/Proposta/MyCardio_Pacientes.mp4"
+                                            class="col text-center btn btn-success my-2 ms-1 code-link">DEMO</a>
+                                    </div>
+                                    <p class="proj-description">
+                                        The final project of my bachelor's degree: a health tracking mobile application
+                                        for patients in the cardiac health wing of one of Lisbon's hospitals, with data
+                                        visualization and risk alert features. Accompanied by a web application made for
+                                        nurses to visualize and tag patient health data with risk patterns. Built using
+                                        Flutter, Node.js + Express, PostgreSQL. Built in collaboration with Hugo Duarte
+                                        (programming), and Teresa Mesquita and Mayra Duarte (design, UI/UX).
+                                    </p>
+                                    <div class="row proj-gallery">
+                                        <img class="img-fluid col-md-4 my-1"
+                                            src="assets/images/projects/university/final-project/screenshot_1.png"
+                                            alt="Final project app screenshot 1">
+                                        <img class="img-fluid col-md-4 my-1"
+                                            src="assets/images/projects/university/final-project/screenshot_2.png"
+                                            alt="Final project app screenshot 2">
+                                        <img class="img-fluid col-md-4 my-1"
+                                            src="assets/images/projects/university/final-project/screenshot_3.png"
+                                            alt="Final project app screenshot 3">
+                                    </div>
+                                    <h5>Technologies used:</h5>
+                                    <div class="row tools-icons">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/nodejs.png"
+                                            alt="NodeJS">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/postgres.png"
+                                            alt="PostgreSQL">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/flutter.png"
+                                            alt="Flutter">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/bootstrap.png"
+                                            alt="Bootstrap">
+                                    </div>
+                                </div>
+
+                                <br>
+                                <hr><br>
+
+                                <!-- Artificial Intelligence -->
+                                <div class="row" id="ACAD-University-ArtificialIntelligence">
+                                    <div class="proj-title">
+                                        <h3>Machine Learning lab</h3>
+                                    </div>
+                                    <h5>An Artificial Intelligence project</h5>
+                                    <div class="proj-links">
+                                        <a href="https://colab.research.google.com/drive/1Fy9kFrq6WIDA5swN8JTnQ0lgZzIiiQzh?usp=sharing"
+                                            class="col text-center btn btn-dark my-2 code-link">CODE</a>
+                                        <a href="https://drive.google.com/file/d/1H7DzxxJC-I7IQ0d4GI-BJcXCibT_zXJx/view?usp=sharing"
+                                            class="col text-center btn btn-secondary my-2 ms-1 code-link">REPORT</a>
+                                    </div>
+                                    <p class="proj-description">
+                                        A project for my Artificial Intelligence class: an experiment on the efficiency
+                                        of two machine learning techniques applied to a dataset regarding the survival
+                                        rate of breast cancer patients following their surgeries. Both techniques
+                                        achieved an accuracy of ~85%, the first one being a decision tree calculated by
+                                        hand in Excel, and the second one being an artificial neural network implemented
+                                        in Tensorflow. For more information, see the report.
+                                    </p>
+                                    <div class="row proj-gallery">
+                                        <img class="img-fluid col-md-6 my-1"
+                                            src="assets/images/projects/university/artificial-intelligence/screenshot_tree.png"
+                                            alt="Artificial Intelligence project decision tree screenshot">
+                                        <img class="img-fluid col-md-6 my-1"
+                                            src="assets/images/projects/university/artificial-intelligence/screenshot_ann.png"
+                                            alt="Artificial Intelligence project neural network screenshot">
+                                    </div>
+                                    <h5>Technologies used:</h5>
+                                    <div class="row tools-icons">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/tensorflow.png"
+                                            alt="Tensorflow">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/excel.png"
+                                            alt="Excel">
+                                    </div>
+                                </div>
+
+                                <br>
+                                <hr><br>
+
+                                <!-- Distributed Systems -->
+                                <div class="row" id="ACAD-University-DistributedSystems">
+                                    <div class="proj-title">
+                                        <h3>Highly Available MFA Service</h3>
+                                    </div>
+                                    <h5>A Distributed Systems project</h5>
+                                    <div class="proj-links">
+                                        <a href="https://github.com/luisfelipeSB/fault_tolerant_2fa_service/tree/main"
+                                            class="col text-center btn btn-dark my-2 code-link">CODE</a>
+                                    </div>
+                                    <p class="proj-description">
+                                        A project for my Distributed Systems class: a highly available (dummy)
+                                        application running on replicated servers and databases, with automatic
+                                        failover. The servers were configured in a master-slave system, while the
+                                        databases were configured in a master-master system using the PostgreSQL Bucardo
+                                        utility. VMs and networks implemented in Azure. For more details, see the code.
+                                    </p>
+                                    <div class="row proj-gallery">
+                                        <img class="img-fluid col-md-9 my-1"
+                                            src="assets/images/projects/university/distributed-systems/screenshot_1.png"
+                                            alt="Distributed Systems project architecture">
+                                    </div>
+                                    <h5>Technologies used:</h5>
+                                    <div class="row tools-icons">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/azure.png"
+                                            alt="Azure">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/nodejs.png"
+                                            alt="NodeJS">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/postgres.png"
+                                            alt="PostgreSQL">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/flutter.png"
+                                            alt="Flutter">
+                                    </div>
+                                </div>
+
+                                <br>
+                                <hr><br>
+
+                                <!-- Web Development -->
+                                <div class="row" id="ACAD-University-WebDevelopment">
+                                    <div class="proj-title">
+                                        <img src="assets/images/projects/university/web-development/icon.png"
+                                            alt="Get Out There icon">
+                                        <h3>Get Out There</h3>
+                                    </div>
+                                    <h5>A Web Development project</h5>
+                                    <div class="proj-links">
+                                        <a href="https://github.com/WillianSantaAna/get_out_there"
+                                            class="col text-center btn btn-dark my-2 code-link">CODE</a>
+                                        <a href="https://get-out-there-app.herokuapp.com"
+                                            class="col text-center btn btn-info my-2 ms-1 code-link">WEBSITE</a>
+                                    </div>
+                                    <p class="proj-description">
+                                        A project for my Web Develoment class: a fitness web application that lets you
+                                        plan your runs across the city, save circuits, join teams, score points, and
+                                        compete! Built with JS, HTML, CSS + Bootstrap, Mapquest, Node.js, and
+                                        PostgreSQL. Built in collaboration with Felipe Gomes, and William Santana.
+                                    </p>
+                                    <div class="row proj-gallery">
+                                        <img src="assets/images/projects/university/web-development/screenshot_mobile.png"
+                                            class="col-md-9 mobile-only"
+                                            alt="Web Development project phone app screenshot">
+                                        <img src="assets/images/projects/university/web-development/screenshot_web.png"
+                                            class="col-md-9 desktp-only"
+                                            alt="Web Development project web page screenshot">
+                                    </div>
+                                    <h5>Technologies used:</h5>
+                                    <div class="row tools-icons">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/nodejs.png"
+                                            alt="NodeJS">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/postgres.png"
+                                            alt="PostgreSQL">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/frontend.png"
+                                            alt="Frontend technologies">
+                                        <img class="img-fluid col-md-4 my-2" src="assets/tech_icons/bootstrap.png"
+                                            alt="Bootstrap">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PRSN-Summaries -->
+                            <div class="tab-pane fade" id="list-PRSN-Summaries" role="tabpanel">
+                                <h2 class="proj-class-header">Summaries</h2>
+                                <hr class="proj-class-hr"><br>
+
+                                <div class="row" id="PRSN-Summaries-Textbooks">
+                                    <h3>Summaries of CS textbooks</h3>
+                                    <h5>A personal project</h5>
+                                    <p class="proj-description">
+                                        Having developed a taste for reading computer science textbooks over the course
+                                        of my CS degree, I decided to compile the most important parts of some of the
+                                        ones I read, in order to quickly refer to their knowledge, and help me retain
+                                        their information over the years. I now share theses summaries with you. Please
+                                        buy the books if you find them useful!
+                                    </p>
+                                    <div class="row proj-gallery">
+                                        <img class="img-fluid col-md-4 my-1"
+                                            src="assets/images/projects/summaries/cs-textbooks/screenshot_1.png"
+                                            alt="Title page screenshot">
+                                        <img class="img-fluid col-md-4 my-1"
+                                            src="assets/images/projects/summaries/cs-textbooks/screenshot_2.png"
+                                            alt="Contents page screenshot">
+                                        <img class="img-fluid col-md-4 my-1"
+                                            src="assets/images/projects/summaries/cs-textbooks/screenshot_3.png"
+                                            alt="Intro page screenshot">
+                                    </div>
+                                    <div class="row text-center mt-3">
+                                        <a
+                                            href="https://drive.google.com/drive/folders/1axWVUTxnBOn7ZDoI4EDi0NoBHrkLrAYO?usp=sharing">
+                                            Start reading
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <hr><br>
+
+                                <div class="row" id="PRSN-Summaries-EnterpriseIT">
+                                    <h3>General Notes on Enterprise IT</h3>
+                                    <h5>A personal project</h5>
+                                    <p class="proj-description">
+                                        Having learned tremendously about enterprise information technology in my first
+                                        year of internships, I decided to write down the most important ideas around
+                                        DevOps and Cybersecurity in the corporate environment. With Windows being the
+                                        dominant operating system in this space, I decided to learn a little bit more
+                                        about how it works too. I now share theses summaries with you. Hope you find
+                                        them useful!
+                                    </p>
+                                    <div class="row proj-gallery">
+                                        <img class="img-fluid col-md-4 my-1"
+                                            src="assets/images/projects/summaries/enterprise-it/screenshot_windows.png"
+                                            alt="Summary of Windows Internals screenshot">
+                                        <img class="img-fluid col-md-4 my-1"
+                                            src="assets/images/projects/summaries/enterprise-it/screenshot_devops.png"
+                                            alt="General Notes on Enterprise IT DevOps screenshot">
+                                        <img class="img-fluid col-md-4 my-1"
+                                            src="assets/images/projects/summaries/enterprise-it/screenshot_security.png"
+                                            alt="General Notes on Enterprise IT Security screenshot">
+                                    </div>
+                                    <div class="row text-center mt-3">
+                                        <a
+                                            href="https://drive.google.com/drive/folders/1VOY8eFg0-JF8T8oIkWjlUC4AcFWa9lnw?usp=sharing">
+                                            Start reading
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PRSN-Games -->
+                            <div class="tab-pane fade" id="list-PRSN-Games" role="tabpanel">
+                                <h2 class="proj-class-header">Games</h2>
+                                <hr class="proj-class-hr"><br>
+
+                                <!-- Pull Prizes -->
+                                <div class="row" id="PRSN-Games-PullPrizes">
+                                    <div class="proj-title">
+                                        <img src="assets/images/projects/games/pull-prizes/icon.png"
+                                            alt="Pull Prizes icon">
+                                        <h3>Pull Prizes</h3>
+                                    </div>
+                                    <h5>A university project</h5>
+                                    <p class="proj-description">
+                                        A computer game developed in my artificial intelligence class where the board is
+                                        a graph (made of nodes and edges), and you must <i>pull prizes</i> in the board
+                                        towards your home node to win. You can play against your computer running the
+                                        minimax algorithm. You can also against another
+                                        human if you want. Written in p5.js.
+                                    </p>
+                                    <div class="proj-gallery">
+                                        <img src="assets/images/projects/games/pull-prizes/graphs.png" class="col-12"
+                                            alt="Pull Prizes graphs">
+                                    </div>
+                                    <div class="row text-center mt-3">
+                                        <a href="https://editor.p5js.org/Luis_Felipe/full/6M1kUhg6d">Start Playing
+                                            (AI)</a>
+                                    </div>
+                                    <div class="row text-center mt-3">
+                                        <a href="https://editor.p5js.org/Luis_Felipe/full/6M1kUhg6d">Start Playing
+                                            (2P)</a>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <hr><br>
+
+                                <!-- Processing Games -->
+                                <div class="row" id="PRSN-Games-Processing">
+                                    <div class="proj-title">
+                                        <img src="assets/images/projects/games/processing/icon.png"
+                                            alt="Processing icon">
+                                        <h3>Processing</h3>
+                                    </div>
+                                    <h5>A personal project</h5>
+                                    <p class="proj-description">
+                                        A trio of computer games I wrote up over the summer after a creative programming
+                                        class in 9th grade. First time I ever programmed anything. Enjoy the games at
+                                        will but look at the code at you own risk :D
+                                    </p>
+                                    <div class="proj-gallery">
+                                        <img src="assets/images/projects/games/processing/screenshot_retro.png"
+                                            class="img-fluid col-md-3 my-1" alt="Retro screenshot">
+                                        <img src="assets/images/projects/games/processing/screenshot_mrjam.png"
+                                            class="img-fluid col-md-3 my-1" alt="Mr. Jam screenshot">
+                                        <img src="assets/images/projects/games/processing/screenshot_shapestatic.png"
+                                            class="img-fluid col-md-3 my-1" alt="ShapeStatic screenshot">
+                                    </div>
+                                    <div class="row text-center mt-3">
+                                        <a
+                                            href="https://drive.google.com/file/d/12fppdezfzjAUhNkn6JzPRCh-5rOqfI9H/view?usp=sharing">Start
+                                            Playing</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PRSN-Art -->
+                            <div class="tab-pane fade" id="list-PRSN-Art" role="tabpanel">
+                                <h2 class="proj-class-header">Art projects</h2>
+                                <hr class="proj-class-hr"><br>
+
+                                <!-- Painitngs -->
+                                <div class="row" id="PRSN-Art-Paintings">
+                                    <h3>Cataclysm</h3>
+                                    <h5>A personal project</h5>
+                                    <p class="proj-description">
+                                        A series of digital artworks. Just because.
+                                    </p>
+                                    <div class="row proj-gallery">
+                                        <img class="col-md-6 col-lg-3 my-1"
+                                            src="assets/images/projects/art/paintings/The Mistress of the Amazon 1.png"
+                                            alt="The Mistress of the Amazon 1">
+                                        <img class="col-md-6 col-lg-3 my-1"
+                                            src="assets/images/projects/art/paintings/The Mistress of the Amazon 2.png"
+                                            alt="The Mistress of the Amazon 2">
+                                        <img class="col-md-6 col-lg-3 my-1"
+                                            src="assets/images/projects/art/paintings/Kalopsia 1.png" alt="Kalopsia 1">
+                                        <img class="col-md-6 col-lg-3 my-1"
+                                            src="assets/images/projects/art/paintings/Kalopsia 2.png" alt="Kalopsia 2">
+                                        <img class="col-md-6 col-lg-3 my-1"
+                                            src="assets/images/projects/art/paintings/Nemesis 1.png" alt="Nemesis 1">
+                                        <img class="col-md-6 col-lg-3 my-1"
+                                            src="assets/images/projects/art/paintings/Nemesis 2.png" alt="Nemesis 2">
+                                        <img class="col-md-6 col-lg-3 my-1"
+                                            src="assets/images/projects/art/paintings/Summon the Fire 1.png"
+                                            alt="Summon the Fire 1">
+                                        <img class="col-md-6 col-lg-3 my-1"
+                                            src="assets/images/projects/art/paintings/Summon the Fire 2.png"
+                                            alt="Summon the Fire 2">
+                                    </div>
+                                    <div class="row text-center mt-3">
+                                        <a
+                                            href="https://drive.google.com/drive/folders/16mcIp8xEzs4yucRQrYfmnUcgh_RvNT2c?usp=sharing">
+                                            See in HD
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <hr><br>
+
+                                <!-- Poems -->
+                                <div class="row" id="PRSN-Art-Poem">
+                                    <h3>Among Other Nodes</h3>
+                                    <h5>A personal project</h5>
+                                    <p class="proj-description">
+                                        A short poem about the dangers of technology misuse.
+                                    </p>
+                                    <div class="row proj-gallery">
+                                        <img class="col-md-6 col-lg-3 my-1"
+                                            src="assets/images/projects/art/poem/screenshot_1.png"
+                                            alt="Poem screenshot 1">
+                                        <img class="col-md-6 col-lg-3 my-1"
+                                            src="assets/images/projects/art/poem/screenshot_2.png"
+                                            alt="Poem screenshot 2">
+                                    </div>
+                                    <div class="row text-center mt-3">
+                                        <a
+                                            href="https://drive.google.com/file/d/1leGSMErvT4iS514dkI5MUT35niJZmB52/view?usp=sharing">
+                                            Start reading
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
                             <!--
                                 <h3>Title</h3>
-                                <h4>Subtitle</h4>
+                                <h5>Subtitle</h5>
                                 <p>
                                     Description
                                 </p>
