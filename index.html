@@ -32,7 +32,7 @@
             // Creating the floating squares background effect
             // Works with a set of list items with CSS styles applied
             const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-            let N_SQUARES = 10
+            let N_SQUARES = 7
             let squares = document.querySelector('#background.area .squares')
             for (let i = 0; i < N_SQUARES; i++) {
                 let li = document.createElement('li')
@@ -107,17 +107,17 @@
                                     <img src="assets/icon-tools.png" alt="Capabilities icon">
                                     <h4><strong>Capabilities</strong></h4>
                                 </div>
-                                <div class="row mt-3">
+                                <div class="row mt-3" id="cybersecurity">
                                     <h6><strong>Cybersecurity</strong></h6>
                                     <ul class="ms-4">
-                                        <li>Cybersecurity architecture</li>
+                                        <li>Security architecture</li>
                                         <li>Vulnerability assessment</li>
                                         <li>Compliance assessment</li>
                                         <li>Penetration testing</li>
                                         <li>Incident response</li>
                                     </ul>
                                 </div>
-                                <div class="row">
+                                <div class="row" id="other-interests">
                                     <h6><strong>Other Interests</strong></h6>
                                     <div class="col">
                                         <ul class="ps-4 pe-0">
@@ -282,12 +282,12 @@
                                             class="col text-center btn btn-info my-2 code-link">WEBSITE</a>
                                     </div>
                                     <p class="proj-description">
-                                        An infrastructure operations project for a client in the public services sector
-                                        - Portugal's Institute of Registrars and Notaries (IRN), part of the Ministry of
-                                        Justice. Contributed as one of the Azure cloud operators. My role involved
+                                        An DevOps project for a client in the public services sector - Portugal's
+                                        Institute of Registrars and Notaries (IRN), part of the Ministry of Justice.
+                                        Contributed as the primary cloud infrastructure operator. My role involved
                                         managing users, servers, networks, automations, dashboards, and security
-                                        controls. Also contributed as one of the solution architects in a subsequent
-                                        phase of the project.
+                                        controls. As the project evolved, I also contributed as one of the solution
+                                        architects and security engineers.
                                     </p>
                                     <h5>Technologies used:</h5>
                                     <div class="row tools-icons">
@@ -313,11 +313,11 @@
                                         <a href="" class="col text-center btn btn-info my-2 code-link">WEBSITE</a>
                                     </div>
                                     <p class="proj-description">
-                                        A web development project for a client in the public services sector -
-                                        Portugal's Environmental Protection Agency (APA), part of the Ministry of the
-                                        Environment. Contributed as an intern web developer. My role involved developing
-                                        the front-end of the platform for aggregating data from an IoT sensor networks
-                                        in the Tagus river for a unified monitoring portal.
+                                        A DevOps project for a client in the public services sector - Portugal's
+                                        Environmental Protection Agency (APA), part of the Ministry of the Environment.
+                                        Contributed as an intern web developer. My role involved developing the
+                                        front-end of the platform for aggregating data from an IoT sensor networks in
+                                        the Tagus river for a unified monitoring portal.
                                     </p>
                                     <h5>Technologies used:</h5>
                                     <div class="row tools-icons">
@@ -575,20 +575,22 @@
                                         A computer game developed in my artificial intelligence class where the board is
                                         a graph (made of nodes and edges), and you must <i>pull prizes</i> in the board
                                         towards your home node to win. You can play against your computer running the
-                                        minimax algorithm. You can also against another
-                                        human if you want. Written in p5.js.
+                                        minimax algorithm. You can also play against another human if you want.
+                                        Written in p5.js.
                                     </p>
                                     <div class="proj-gallery">
-                                        <img src="assets/images/projects/games/pull-prizes/graphs.png" class="col-12"
-                                            alt="Pull Prizes graphs">
+                                        <img src="assets/images/projects/games/pull-prizes/graphs.png"
+                                            style="max-height: 125px; max-width: 100%;" alt="Pull Prizes graphs">
                                     </div>
                                     <div class="row text-center mt-3">
-                                        <a href="https://editor.p5js.org/Luis_Felipe/full/6M1kUhg6d">Start Playing
-                                            (AI)</a>
+                                        <a href="https://editor.p5js.org/Luis_Felipe/full/6M1kUhg6d">
+                                            Start Playing (AI)
+                                        </a>
                                     </div>
                                     <div class="row text-center mt-3">
-                                        <a href="https://editor.p5js.org/Luis_Felipe/full/6M1kUhg6d">Start Playing
-                                            (2P)</a>
+                                        <a href="https://editor.p5js.org/Luis_Felipe/full/6M1kUhg6d">
+                                            Start Playing (2P)
+                                        </a>
                                     </div>
                                 </div>
 
@@ -618,8 +620,9 @@
                                     </div>
                                     <div class="row text-center mt-3">
                                         <a
-                                            href="https://drive.google.com/file/d/12fppdezfzjAUhNkn6JzPRCh-5rOqfI9H/view?usp=sharing">Start
-                                            Playing</a>
+                                            href="https://drive.google.com/file/d/12fppdezfzjAUhNkn6JzPRCh-5rOqfI9H/view?usp=sharing">
+                                            Start Playing
+                                        </a>
                                     </div>
                                 </div>
                             </div>
