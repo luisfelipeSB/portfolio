@@ -71,10 +71,10 @@ h3 {
 
 /*---------- ABOUT ME TAB ----------*/
 
-#pfpic {
+.pfpic {
   padding: 0%;
   border-radius: 20px;
-  width: 150px;
+  width: 200px;
 }
 
 .fa,
