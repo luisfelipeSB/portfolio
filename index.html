@@ -25,30 +25,7 @@
 <body>
 
     <!-- Background -->
-    <div id="background" class="area">
-        <ul class="squares">
-        </ul>
-        <script>
-            // Creating the floating squares background effect
-            // Works with a set of list items with CSS styles applied
-            const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-            let N_SQUARES = 7
-            let squares = document.querySelector('#background.area .squares')
-            for (let i = 0; i < N_SQUARES; i++) {
-                let li = document.createElement('li')
-                let li_left = rand(0, 100) + '%'
-                let li_size = rand(20, 150) + 'px'
-                let li_anim_delay = rand(0, 20) + 's'
-                let li_anim_durat = rand(12, 35) + 's'
-                li.style.setProperty('left', li_left);
-                li.style.setProperty('width', li_size);
-                li.style.setProperty('height', li_size);
-                li.style.setProperty('animation-delay', li_anim_delay);
-                li.style.setProperty('animation-duration', li_anim_durat);
-                squares.appendChild(li)
-            }
-        </script>
-    </div>
+    <div id="background" class="area"></div>
 
     <!-- Frosted glass panel -->
     <div id="panel">
@@ -56,11 +33,11 @@
         <!-- Tabs -->
         <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about"
+                <button class="nav-link  active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about"
                     type="button" role="tab" aria-controls="about" aria-selected="true">About Me</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button"
+                <button class="nav-link " id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button"
                     role="tab" aria-controls="projects" aria-selected="false">Projects</button>
             </li>
         </ul>
@@ -98,9 +75,9 @@
                                 </button>
                             </div>
                         </div>
-                        <h5 class="text-center"><b>Luís Felipe Saraiva Baptista</b></h5>
+                        <h3 class="text-center"><b>Luís Felipe Saraiva Baptista</b></h3>
                         <div class="row justify-content-center">
-                            <a href="assets/documents/CV.pdf" class="col-2 text-center mx-2 fa fa-cv"
+                            <a href="assets/documents/CV.pdf" class="col-2 text-center mx-2  fa fa-cv"
                                 title="Resumé"><strong>CV</strong></a>
                             <a href="https://www.linkedin.com/in/luis-felipe-saraiva-baptista"
                                 class="col-2 text-center mx-2 fab fa-linkedin" title="LinkedIn"></a>
@@ -125,31 +102,31 @@
                             <!-- Capabilities -->
                             <div id="aboutme-capabilities" class="col-lg-7 mb-4 pe-5">
                                 <div class="proj-title">
-                                    <img src="assets/icon-tools.png" alt="Capabilities icon">
+                                    <img src="assets/icon-capabilities.png" alt="Capabilities icon" style="height: 30px; margin-right: 5px;">
                                     <h4><strong>Capabilities</strong></h4>
                                 </div>
-                                <div class="row mt-3" id="cybersecurity">
-                                    <h6><strong>Cybersecurity</strong></h6>
+                                <div class="row mt-3">
+                                    <h5><strong>Cybersecurity</strong></h5>
                                     <ul class="ms-4">
-                                        <li>Security architecture</li>
+                                        <li>Security engineering</li>
                                         <li>Vulnerability management</li>
                                         <li>Compliance assessment</li>
                                         <li>Penetration testing</li>
                                         <li>Incident response</li>
                                     </ul>
                                 </div>
-                                <div class="row" id="other-interests">
-                                    <h6><strong>Other Interests</strong></h6>
+                                <div class="row">
+                                    <h5><strong>Related Interests</strong></h5>
                                     <div class="col">
                                         <ul class="ps-4 pe-0">
-                                            <li>Azure Cloud</li>
-                                            <li>Blockchain</li>
+                                            <li>Cloud</li>
+                                            <li>Web3</li>
                                         </ul>
                                     </div>
                                     <div class="col">
                                         <ul class="ps-4 pe-0">
-                                            <li>AI / ML</li>
-                                            <li>DevOps</li>
+                                            <li>AppSec</li>
+                                            <li>DevSecOps</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -170,22 +147,10 @@
                                                 <h5 class="card-title"><strong>Avanade</strong></h5>
                                             </div>
                                             <h7 class="card-subtitle text-muted">
-                                                Sep 2024 -
-                                            </h7>
-                                            <p class="card-text">
-                                                Sr. Analyst, Cyber Defense
-                                            </p>
-                                            <h7 class="card-subtitle text-muted">
-                                                Sep 2023 - Sep 2024
+                                                Sep 2022 -
                                             </h7>
                                             <p class="card-text">
                                                 Analyst, Cyber Defense
-                                            </p>
-                                            <h7 class="card-subtitle text-muted">
-                                                Sep 2022 - Sep 2023
-                                            </h7>
-                                            <p class="card-text">
-                                                Jr. Analyst, Cyber Defense
                                             </p>
                                         </div>
                                     </div>
@@ -209,7 +174,7 @@
                         </div>
 
                         <!-- Introductory Paragraph -->
-                        <button class="btn btn-dark btn-sm my-0 read-more" type="button" data-bs-toggle="collapse"
+                        <button class="btn btn-dark btn-sm my-0  read-more" type="button" data-bs-toggle="collapse"
                             data-bs-target="#read-more" aria-expanded="false" aria-controls="read-more"
                             style="top:-5em">
                             Read More ▾
@@ -243,7 +208,7 @@
 
                     <!-- List group -->
                     <div class="col-md-4 order-md-1 justify-content-center">
-                        <div class="list-group" id="list-tab" role="tablist">
+                        <div class="list-group " id="list-tab" role="tablist">
                             <a class="list-group-item list-group-item-action active" data-bs-toggle="list"
                                 href="#list-PRSN-Book" role="tab">
                                 ⭐ Technoland
@@ -324,23 +289,23 @@
                                     </p>
                                     <h5>Technologies used:</h5>
                                     <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
-                                        <div class="text-center mt-2 mb-0">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                        <div class="text-center mt-2">
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/azure.png" alt="Azure">
                                             <p class="mt-2">Azure</p>
                                         </div>
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/entraid.png" alt="Entra ID">
                                             <p class="mt-2">Entra ID</p>
                                         </div>
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/defender.png" alt="Defender for Cloud">
                                             <p class="mt-2">Defender</p>
                                         </div>
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/sentinel.png" alt="Sentinel">
                                             <p class="mt-2">Sentinel</p>
                                         </div>
@@ -373,13 +338,13 @@
                                     </p>
                                     <h5>Technologies used:</h5>
                                     <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
-                                        <div class="text-center mt-2 mb-0">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                        <div class="text-center mt-2">
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/azure.png" alt="Azure">
                                             <p class="mt-2">Azure</p>
                                         </div>
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/entraid.png" alt="Entra ID">
                                             <p class="mt-2">Entra ID</p>
                                         </div>
@@ -403,13 +368,13 @@
                                     </p>
                                     <h5>Technologies used:</h5>
                                     <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
-                                        <div class="text-center mt-2 mb-0">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                        <div class="text-center mt-2">
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/workspace-one.png" alt="Workspace One (AirWatch)">
                                             <p class="mt-2">AirWatch</p>
                                         </div>
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/intune.png" alt="Intune">
                                             <p class="mt-2">Intune</p>
                                         </div>
@@ -440,12 +405,12 @@
                                     <h5>Technologies used:</h5>
                                     <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
                                         <div class="text-center my-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/drupal.png" alt="Drupal">
                                             <p class="mt-2">Drupal</p>
                                         </div>
                                         <div class="text-center my-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/bootstrap.png" alt="Bootstrap">
                                             <p class="mt-2">Bootstrap</p>
                                         </div>
@@ -566,22 +531,22 @@
                                     <h5>Technologies used:</h5>
                                     <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/nodejs.png" alt="Node JS">
                                             <p class="mt-2">Node.js</p>
                                         </div>
-                                        <div class="text-center mt-2 mb-0">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                        <div class="text-center mt-2">
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/postgres.png" alt="PostgreSQL">
                                             <p class="mt-2">PostgreSQL</p>
                                         </div>
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/flutter.png" alt="Flutter">
                                             <p class="mt-2">Flutter</p>
                                         </div>
                                         <div class="text-center my-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/bootstrap.png" alt="Bootstrap">
                                             <p class="mt-2">Bootstrap</p>
                                         </div>
@@ -595,7 +560,7 @@
                                     <div class="proj-title">
                                         <h3>Machine Learning lab</h3>
                                     </div>
-                                    <h5>An Artificial Intelligence project</h5>
+                                    <h5>An artificial intelligence project</h5>
                                     <div class="proj-links">
                                         <a href="https://colab.research.google.com/drive/1Fy9kFrq6WIDA5swN8JTnQ0lgZzIiiQzh?usp=sharing"
                                             class="col text-center btn btn-dark my-2 code-link">CODE</a>
@@ -612,13 +577,13 @@
                                     </p>
                                     <h5>Technologies used:</h5>
                                     <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
-                                        <div class="text-center mt-2 mb-0">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                        <div class="text-center mt-2">
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/tensorflow.png" alt="TensorFlow">
                                             <p class="mt-2">TensorFlow</p>
                                         </div>
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/excel.png" alt="Excel">
                                             <p class="mt-2">Excel</p>
                                         </div>
@@ -632,7 +597,7 @@
                                     <div class="proj-title">
                                         <h3>Highly Available App with MFA</h3>
                                     </div>
-                                    <h5>A Distributed Systems project</h5>
+                                    <h5>A distributed systems project</h5>
                                     <div class="proj-links">
                                         <a href="https://github.com/luisfelipeSB/fault_tolerant_2fa_service/tree/main"
                                             class="col text-center btn btn-dark my-2 code-link">CODE</a>
@@ -647,23 +612,23 @@
                                     </p>
                                     <h5>Technologies used:</h5>
                                     <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
-                                        <div class="text-center mt-2 mb-0">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                        <div class="text-center mt-2">
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/azure.png" alt="Azure">
                                             <p class="mt-2">Azure</p>
                                         </div>
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/nodejs.png" alt="Node JS">
                                             <p class="mt-2">Node.js</p>
                                         </div>
-                                        <div class="text-center mt-2 mb-0">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                        <div class="text-center mt-2">
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/postgres.png" alt="PostgreSQL">
                                             <p class="mt-2">PostgreSQL</p>
                                         </div>
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/flutter.png" alt="Flutter">
                                             <p class="mt-2">Flutter</p>
                                         </div>
@@ -679,7 +644,7 @@
                                             alt="Get Out There icon">
                                         <h3>Get Out There</h3>
                                     </div>
-                                    <h5>A Web Development project</h5>
+                                    <h5>A web development project</h5>
                                     <div class="proj-links">
                                         <a href="https://github.com/WillianSantaAna/get_out_there"
                                             class="col text-center btn btn-dark my-2 code-link">CODE</a>
@@ -703,22 +668,22 @@
                                     <h5>Technologies used:</h5>
                                     <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/nodejs.png" alt="Node JS">
                                             <p class="mt-2">Node.js</p>
                                         </div>
-                                        <div class="text-center mt-2 mb-0">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                        <div class="text-center mt-2">
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/postgres.png" alt="PostgreSQL">
                                             <p class="mt-2">PostgreSQL</p>
                                         </div>
-                                        <div class="text-center mt-2 mb-0">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                        <div class="text-center mt-2">
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/frontend.png" alt="Frontend technologies">
                                             <p class="mt-2">HTML, CSS, JS</p>
                                         </div>
                                         <div class="text-center mt-2">
-                                            <img class="img-fluid" style="max-height: 3.5em; width: auto;"
+                                            <img class="img-fluid"
                                             src="assets/tech_icons/bootstrap.png" alt="Bootstrap">
                                             <p class="mt-2">Bootstrap</p>
                                         </div>

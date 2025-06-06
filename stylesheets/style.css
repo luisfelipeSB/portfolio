@@ -1,10 +1,16 @@
 @font-face {
-  font-family: lexendDeca;
+  font-family: ebg;
+  src: url("../assets/EBGaramond-Medium.ttf");
+}
+
+@font-face {
+  font-family: lxd;
   src: url("../assets/LexendDeca-Regular.ttf");
 }
 
 body {
-  font-family: lexendDeca;
+  font-family: ebg;
+  font-size: 1.15em;
 }
 
 #background,
@@ -21,9 +27,7 @@ body {
   z-index: 1;
   margin: 10%;
   background-color: #c5c5c54d;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .nav-link {
@@ -42,12 +46,18 @@ a {
   color: #161b22;
 }
 
+a,
+button {
+  font-family: lxd;
+  font-size: 0.9em;
+}
+
 h3 {
   font-weight: bold;
 }
 
 .read-more {
-  border-radius: 15px !important;
+  border-radius: 10px !important;
 }
 
 /* Large displays */
@@ -73,7 +83,7 @@ h3 {
 
 .pfpic {
   padding: 0%;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 200px;
 }
 
@@ -143,12 +153,12 @@ a:hover {
 }
 
 .card {
-  border-radius: 1em;
+  border-radius: 7px;
   background-color: #c5c5c580;
 }
 
 .card-text {
-  font-size: small;
+  font-size: medium;
 }
 
 .company-logo {
@@ -158,18 +168,14 @@ a:hover {
 /* Small displays */
 @media screen and (max-width: 768px) {
   #email {
-    font-size: 2.8vw;
-  }
-
-  #aboutme-capabilities #cybersecurity {
-    font-size: 0.95em;
+    font-size: 3vw;
   }
 }
 
 /*---------- PROJECTS TAB ----------*/
 
 .list-group {
-  border-radius: 15px;
+  border-radius: 7px;
 }
 
 .list-group-item {
@@ -198,7 +204,7 @@ a:hover {
 .proj-title img {
   float: left;
   width: auto;
-  height: 30px;
+  height: 25px;
   margin-right: 10px;
 }
 
@@ -232,7 +238,19 @@ a:hover {
   padding-bottom: 1em;
 }
 
+.tools-icons div {
+  background-color: #dfdfdf2f;
+  padding: 10px;
+  border-radius: 7px;
+  border: #000000b9;
+}
+
 .tools-icons img {
-  max-height: 5em;
-  max-width: 5em;
+  max-height: 2.3em;
+  width: auto;
+}
+
+.tools-icons p {
+  font-size: small;
+  margin-bottom: 0;
 }
