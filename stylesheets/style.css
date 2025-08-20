@@ -1,3 +1,8 @@
+:root {
+  --base-weight: 250;
+  --bold-weight: 450;
+}
+
 @font-face {
   font-family: ebg;
   src: url("../assets/EBGaramond-Medium.ttf");
@@ -11,6 +16,12 @@
 body {
   font-family: ebg;
   font-size: 1.15em;
+  color: #e6e6e6;
+  font-weight: var(--base-weight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--bold-weight);
 }
 
 #background,
@@ -26,8 +37,11 @@ body {
 #panel {
   z-index: 1;
   margin: 10%;
-  background-color: #c5c5c54d;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  border-radius: 12px;
 }
 
 .nav-link {
@@ -35,7 +49,7 @@ body {
 }
 
 .nav-link:hover {
-  color: black;
+  color: gray;
 }
 
 .content {
@@ -43,7 +57,7 @@ body {
 }
 
 a {
-  color: #161b22;
+  color: lightgray;
 }
 
 a,
@@ -52,12 +66,8 @@ button {
   font-size: 0.9em;
 }
 
-h3 {
-  font-weight: bold;
-}
-
-.read-more {
-  border-radius: 10px !important;
+.btn-dark {
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
 /* Large displays */
@@ -85,6 +95,11 @@ h3 {
   padding: 0%;
   border-radius: 10px;
   width: 200px;
+}
+
+.carousel-indicator {
+  height: .5em !important; 
+  width: .5em !important;
 }
 
 .fa,
@@ -131,7 +146,7 @@ a:hover {
   content: '';
   position: absolute;
   width: 3px;
-  background-color: lightgray;
+  background-color: gray;
   top: 0;  
   left: -15px;
   bottom: 0;
@@ -145,7 +160,7 @@ a:hover {
   width: 15px;
   height: 15px;
   background-color: white;
-  border: 3px solid lightgray;
+  border: 3px solid gray;
   top: 15px;
   left: -22px;
   border-radius: 50%;
@@ -154,7 +169,7 @@ a:hover {
 
 .card {
   border-radius: 7px;
-  background-color: #c5c5c580;
+  background-color: #aaaaaa3d;
 }
 
 .card-text {
@@ -163,6 +178,7 @@ a:hover {
 
 .company-logo {
   border-radius: 50%;
+  transform: translateY(-1px) !important;
 }
 
 /* Small displays */
@@ -185,26 +201,28 @@ a:hover {
 }
 
 .list-group-item {
-  background: #ffffff4f;
+  background: #aaaaaa3d;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #e6e6e6;
 }
 
 .list-group-item:hover {
-  background-color: #ffffffcc;
+  background-color: #ffffffa1;
 }
 
 .list-group-item.active {
-  background: #007bb5;
+  background: white;
+  color: #505050;
   border: none;
 }
 
 .proj-class-header {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .proj-class-hr {
   border: none;
   height: 2px !important;
-  background-color: #000000;
 }
 
 .proj-title img {
@@ -212,6 +230,7 @@ a:hover {
   width: auto;
   height: 25px;
   margin-right: 10px;
+  transform: translateY(3px);
 }
 
 .code-link {
@@ -244,6 +263,10 @@ a:hover {
   padding-bottom: 1em;
 }
 
+.tools-icons {
+  margin-bottom: 1em;
+}
+
 .tools-icons div {
   background-color: #dfdfdf2f;
   padding: 10px;
@@ -259,6 +282,10 @@ a:hover {
 .tools-icons p {
   font-size: small;
   margin-bottom: 0;
+}
+
+table * {
+  color: #e6e6e6;
 }
 
 table td {
