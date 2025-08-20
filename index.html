@@ -47,13 +47,25 @@
             let animationFrameId;
 
             function setup() {
+                const oldWidth = canvas.width;
+                const oldHeight = canvas.height;
+                
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
 
-                nodes = [];
-                const nodeCount = Math.floor((canvas.width * canvas.height) / 15000 * (config.nodeCount / 100));
-                for (let i = 0; i < nodeCount; i++) {
-                    nodes.push(createNode());
+                if (nodes.length === 0) {
+                    const nodeCount = Math.floor((canvas.width * canvas.height) / 15000 * (config.nodeCount / 100));
+                    for (let i = 0; i < nodeCount; i++) {
+                        nodes.push(createNode());
+                    }
+                } else {
+                    const widthRatio = canvas.width / oldWidth;
+                    const heightRatio = canvas.height / oldHeight;
+                    
+                    nodes.forEach(node => {
+                        node.x *= widthRatio;
+                        node.y *= heightRatio;
+                    });
                 }
 
                 if (animationFrameId) {
@@ -66,7 +78,6 @@
                 return {
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-
                     vx: (Math.random() - 0.5) * config.velocity,
                     vy: (Math.random() - 0.5) * config.velocity,
                 };
@@ -112,10 +123,15 @@
                 animationFrameId = requestAnimationFrame(animate);
             }
 
-            // --- Event Listeners ---
-            window.addEventListener('resize', setup);
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                if (resizeTimer) clearTimeout(resizeTimer);
+                
+                resizeTimer = setTimeout(() => {
+                    setup();
+                }, 250);
+            });
 
-            // --- Initial Start ---
             setup();
         });
     </script>
