@@ -49,7 +49,7 @@
             function setup() {
                 const oldWidth = canvas.width;
                 const oldHeight = canvas.height;
-                
+
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
 
@@ -61,7 +61,7 @@
                 } else {
                     const widthRatio = canvas.width / oldWidth;
                     const heightRatio = canvas.height / oldHeight;
-                    
+
                     nodes.forEach(node => {
                         node.x *= widthRatio;
                         node.y *= heightRatio;
@@ -126,7 +126,7 @@
             let resizeTimer;
             window.addEventListener('resize', () => {
                 if (resizeTimer) clearTimeout(resizeTimer);
-                
+
                 resizeTimer = setTimeout(() => {
                     setup();
                 }, 250);
@@ -315,16 +315,15 @@
                         <div class="collapse mt-4" id="read-more">
                             <p>
                                 Hi! &#128075 My name is Luís, welcome to my website! I am a Brazilian cybersecurity
-                                analyst currently living in Lisbon, Portugal. I enjoy solving problems and working with
-                                modern defensive computer security technologies, but have always been interested in
-                                other areas of computer engineering as well, including devops, cloud, data analysis, and
-                                blockchain.
+                                analyst currently living in Lisbon, Portugal. I've always been drawn to high-impact
+                                fields of science and engineering, and I especially enjoy testing and strengthening
+                                security defenses while working with modern infosec tools in diverse teams.
                             </p>
                             <p>
                                 In my spare time, I'm usually either running, cooking, enjoying the beach, or practicing
                                 my capoeira kicks. I'm always up to date with the latest tech news and papers, and
                                 constantly looking out for new technologies to explore and projects to take on. I aspire
-                                to one day return to my home city of Rio to help improve its information and
+                                to one day return to my home city of Rio de Janeiro to help improve its information and
                                 communications technology infrastructure.
                             </p>
                             <p>
