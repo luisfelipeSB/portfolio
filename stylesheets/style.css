@@ -60,6 +60,11 @@ a {
   color: lightgray;
 }
 
+p a {
+  font-family: ebg;
+  font-size: inherit;
+}
+
 a,
 button {
   font-family: lxd;
@@ -231,6 +236,11 @@ a:hover {
   height: 25px;
   margin-right: 10px;
   transform: translateY(3px);
+}
+
+.proj-divisor-hr {
+  border: none;
+  height: 4px !important;
 }
 
 .code-link {

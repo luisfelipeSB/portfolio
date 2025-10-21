@@ -173,9 +173,6 @@
                                     <button type="button" data-bs-target="#carouselExampleIndicators"
                                         data-bs-slide-to="2" class="rounded-circle mx-1 carousel-indicator"
                                         aria-label="Slide 3"></button>
-                                    <button type="button" data-bs-target="#carouselExampleIndicators"
-                                        data-bs-slide-to="3" class="rounded-circle mx-1 carousel-indicator"
-                                        aria-label="Slide 4"></button>
                                 </div>
                                 <div class="carousel-inner justify-content-center">
                                     <div class="carousel-item active">
@@ -188,9 +185,6 @@
                                     <div class="carousel-item">
                                         <img src="assets/pfpic_pro2.jpg" class="d-block pfpic"
                                             alt="Professional profile picture">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/pfpic2.jpg" class="d-block pfpic" alt="Profile picture">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button"
@@ -342,28 +336,20 @@
                     <div class="col-md-4 order-md-1 justify-content-center">
                         <div class="list-group " id="list-tab" role="tablist">
                             <a class="list-group-item list-group-item-action active" data-bs-toggle="list"
-                                href="#list-PRSN-Book" role="tab">
+                                href="#list-Book" role="tab">
                                 ⭐ Book
                             </a>
-                            <a class="list-group-item list-group-item-action" data-bs-toggle="list"
-                                href="#list-PROF-Career" role="tab">
+                            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#list-Career"
+                                role="tab">
                                 💼 Career
                             </a>
                             <a class="list-group-item list-group-item-action" data-bs-toggle="list"
-                                href="#list-PROF-Internships" role="tab">
-                                🧑‍💻 Internships
+                                href="#list-Upskilling" role="tab">
+                                📚 Upskilling
                             </a>
                             <a class="list-group-item list-group-item-action" data-bs-toggle="list"
-                                href="#list-ACAD-SelfEd" role="tab">
-                                📚 Self-Education
-                            </a>
-                            <a class="list-group-item list-group-item-action" data-bs-toggle="list"
-                                href="#list-ACAD-University" role="tab">
-                                🎓 University
-                            </a>
-                            <a class="list-group-item list-group-item-action" data-bs-toggle="list"
-                                href="#list-ACAD-School" role="tab">
-                                🏫 School
+                                href="#list-Academics" role="tab">
+                                🎓 Academics
                             </a>
                         </div>
                     </div>
@@ -372,8 +358,8 @@
                     <div class="col-md-8 order-md-2 justify-content-center">
                         <div class="tab-content" id="nav-tabContent">
 
-                            <!-- PRSN-Technoland -->
-                            <div class="tab-pane fade show active" id="list-PRSN-Book" role="tabpanel">
+                            <!-- Book -->
+                            <div class="tab-pane fade show active" id="list-Book" role="tabpanel">
                                 <h3>Technoland</h3>
                                 <h4>A personal project</h4>
                                 <p class="proj-description">
@@ -389,297 +375,339 @@
                                 </div>
                             </div>
 
-                            <!-- PROF-Career -->
-                            <div class="tab-pane fade" id="list-PROF-Career" role="tabpanel">
-                                <h2 class="proj-class-header">Career projects</h2>
-                                <hr class="proj-class-hr"><br>
+                            <!-- Career -->
+                            <div class="tab-pane fade" id="list-Career" role="tabpanel">
+                                <!-- CAREER -->
+                                <div id="Career">
+                                    <h2 class="proj-class-header">Career projects</h2>
+                                    <hr class="proj-class-hr"><br>
 
-                                <!-- BUPi 2.0 -->
-                                <div class="row" id="PROF-Career-Avanade-BUPi2">
-                                    <div class="proj-title">
-                                        <img src="assets/images/projects/career/bupi/icon.png" alt="BUPi icon">
-                                        <h3>BUPi 2.0</h3>
+                                    <!-- BUPi 2.0 -->
+                                    <div class="row" id="Career-Avanade-BUPi2">
+                                        <div class="proj-title">
+                                            <img src="assets/images/projects/career/bupi2/icon.png" alt="BUPi icon">
+                                            <h3>BUPi 2.0</h3>
+                                        </div>
+                                        <h4>A project for Avanade</h4>
+                                        <div class="proj-links">
+                                            <a href="https://bupi.gov.pt/"
+                                                class="col text-center btn btn-secondary my-2 code-link">WEBSITE</a>
+                                        </div>
+                                        <p class="proj-description">
+                                            A cloud engineering project for a client in the public services sector -
+                                            Portugal's land registry office: <i>Balcão Único do Prédio (BUPi)</i>, part
+                                            of
+                                            the Ministry of Justice. Contributed as the primary cloud security engineer.
+                                            My
+                                            role involved setting up several key security components of the
+                                            infrastructure
+                                            (e.g., firewalls, IDPS, EDRs, SIEM/SOAR), in addition to managing
+                                            vulnerabilities, managing identities and accesses, conducting basic security
+                                            operations, threat intelligence gathering, and managing controls for
+                                            compliance.
+                                            Later my functions extended into application security, with a focus on
+                                            implementing devsecops practices, and security testing. Developed dozens of
+                                            internal tools to automate security workflows.
+                                        </p>
+                                        <p>
+                                            As the project matured and my responsibilities grew, I was given the freedom
+                                            to
+                                            build the backbone of the security practice in the organization, which is
+                                            followed to this day. Over the course of a year we went from zero controls
+                                            and
+                                            no security culture to a fully documented, repeatable program — complete
+                                            with
+                                            role definitions, compliance standards, living procedures, and a pipeline of
+                                            continuous improvement initiatives.
+                                        </p>
+                                        <div class="table-responsive">
+                                            <table class="table mt-2 mb-4">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Domain</th>
+                                                        <th>What we documented</th>
+                                                        <th>Business impact</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Roles &amp; Responsibilities</td>
+                                                        <td>Team member profiles, skill‑matrix</td>
+                                                        <td>Boosted morale aligned with high-impact work</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Standards</td>
+                                                        <td>CIS, ISO27001, QNRCS compliance checklists</td>
+                                                        <td>Continuous compliance monitoring for audit readiness</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Procedures</td>
+                                                        <td>Recurring workflows (asset management, vuln‑scans, access
+                                                            reviews, firewall cleanups, pentests, ...)</td>
+                                                        <td>Continuous security monitoring for risk mitigation
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Configurations</td>
+                                                        <td>Baseline templates for firewalls, Azure Policies,
+                                                            EDRs, SIEM, ...</td>
+                                                        <td>Drift‑free, scalable deployments</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Initiatives</td>
+                                                        <td>
+                                                            <i>InfraSec</i>: VM/Container hardening, IaC security, PIM,
+                                                            FIM,
+                                                            ...
+                                                            <br>
+                                                            <i>AppSec</i>: HTTP security headers, SBOM tracking,
+                                                            SAST/DAST,
+                                                            ...
+                                                        </td>
+                                                        <td>Vastly reduced attack surfaces</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Reports</td>
+                                                        <td>Live dashboards, periodic vulnerability and
+                                                            pentesting reports</td>
+                                                        <td>Top-level visibility, data-driven decisions</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <h4>Technologies used:</h4>
+                                        <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/azure.png" alt="Azure">
+                                                <p class="mt-2">Azure</p>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/entraid.png"
+                                                    alt="Entra ID">
+                                                <p class="mt-2">Entra ID</p>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/defender.png"
+                                                    alt="Defender for Cloud">
+                                                <p class="mt-2">Defender</p>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/defender_easm.png"
+                                                    alt="Defender EASM">
+                                                <p class="mt-2">EASM</p>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/sentinel.png"
+                                                    alt="Sentinel">
+                                                <p class="mt-2">Sentinel</p>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/dependency_track.png"
+                                                    alt="Dependency Track">
+                                                <p class="mt-2">Dependency Track</p>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/checkov.png"
+                                                    alt="Checkov">
+                                                <p class="mt-2">Checkov</p>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/owasp_zap.png"
+                                                    alt="OWASP ZAP">
+                                                <p class="mt-2">ZAP</p>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/caido.png" alt="Caido">
+                                                <p class="mt-2">Caido</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h4>A project for Avanade</h4>
-                                    <div class="proj-links">
-                                        <a href="https://bupi.gov.pt/"
-                                            class="col text-center btn btn-secondary my-2 code-link">WEBSITE</a>
+                                </div>
+
+                                <br>
+                                <hr class="proj-divisor-hr" data-content="Learning">
+                                <br>
+
+                                <!-- INTERNSHIPS -->
+                                <div id="Internships">
+                                    <h2 class="proj-class-header">Internship projects</h2>
+                                    <hr class="proj-class-hr"><br>
+
+                                    <!-- BUPi -->
+                                    <div class="row" id="Career-Avanade-BUPi">
+                                        <div class="proj-title">
+                                            <img src="assets/images/projects/career/internships/bupi/icon.png"
+                                                alt="BUPi icon">
+                                            <h3>BUPi</h3>
+                                        </div>
+                                        <h4>A project for Avanade</h4>
+                                        <div class="proj-links">
+                                            <a href="https://bupi.gov.pt/"
+                                                class="col text-center btn btn-secondary my-2 code-link">WEBSITE</a>
+                                        </div>
+                                        <p class="proj-description">
+                                            An cloud engineering project for a client in the public services sector -
+                                            Portugal's land registry office: <i>Balcão Único do Prédio (BUPi)</i>, part
+                                            of
+                                            the Ministry of Justice. Contributed as the primary cloud infrastructure
+                                            operator.
+                                            My role involved managing users, servers, networks, automations, dashboards,
+                                            and
+                                            implementing security controls.
+                                        </p>
+                                        <h4>Technologies used:</h4>
+                                        <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/azure.png" alt="Azure">
+                                                <p class="mt-2">Azure</p>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/entraid.png"
+                                                    alt="Entra ID">
+                                                <p class="mt-2">Entra ID</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="proj-description">
-                                        A cloud engineering project for a client in the public services sector -
-                                        Portugal's land registry office: <i>Balcão Único do Prédio (BUPi)</i>, part of
-                                        the Ministry of Justice. Contributed as the primary cloud security engineer. My
-                                        role involved setting up several key security components of the infrastructure
-                                        (e.g., firewalls, IDPS, EDRs, SIEM/SOAR), in addition to managing
-                                        vulnerabilities, managing identities and accesses, conducting basic security
-                                        operations, threat intelligence gathering, and managing controls for compliance.
-                                        Later my functions extended into application security, with a focus on
-                                        implementing devsecops practices, and security testing. Developed dozens of
-                                        internal tools to automate security workflows.
-                                    </p>
-                                    <p>
-                                        As the project matured and my responsibilities grew, I was given the freedom to
-                                        build the backbone of the security practice in the organization, which is
-                                        followed to this day. Over the course of a year we went from zero controls and
-                                        no security culture to a fully documented, repeatable program — complete with
-                                        role definitions, compliance standards, living procedures, and a pipeline of
-                                        continuous improvement initiatives.
-                                    </p>
-                                    <div class="table-responsive">
-                                        <table class="table mt-2 mb-4">
-                                            <thead>
-                                                <tr>
-                                                    <th>Domain</th>
-                                                    <th>What we documented</th>
-                                                    <th>Business impact</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Roles &amp; Responsibilities</td>
-                                                    <td>Team member profiles, skill‑matrix</td>
-                                                    <td>Boosted morale aligned with high-impact work</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Standards</td>
-                                                    <td>CIS, ISO27001, QNRCS compliance checklists</td>
-                                                    <td>Continuous compliance monitoring for audit readiness</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Procedures</td>
-                                                    <td>Recurring workflows (asset management, vuln‑scans, access
-                                                        reviews, firewall cleanups, pentests, ...)</td>
-                                                    <td>Continuous security monitoring for risk mitigation
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Configurations</td>
-                                                    <td>Baseline templates for firewalls, Azure Policies,
-                                                        EDRs, SIEM, ...</td>
-                                                    <td>Drift‑free, scalable deployments</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Initiatives</td>
-                                                    <td>
-                                                        <i>InfraSec</i>: VM/Container hardening, IaC security, PIM, FIM,
-                                                        ...
-                                                        <br>
-                                                        <i>AppSec</i>: HTTP security headers, SBOM tracking, SAST/DAST,
-                                                        ...
-                                                    </td>
-                                                    <td>Vastly reduced attack surfaces</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Reports</td>
-                                                    <td>Live dashboards, periodic vulnerability and
-                                                        pentesting reports</td>
-                                                    <td>Top-level visibility, data-driven decisions</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+
+                                    <hr><br>
+
+                                    <!-- EDP -->
+                                    <div class="row" id="Career-Avanade-EDP">
+                                        <div class="proj-title">
+                                            <img src="assets/images/projects/career/internships/edp/icon.png"
+                                                alt="EDP icon">
+                                            <h3>EDP</h3>
+                                        </div>
+                                        <h4>A project for Avanade</h4>
+                                        <p class="proj-description">
+                                            A technical IT support service for a client in the utilities sector -
+                                            Portugal's
+                                            largest electric utilities company: <i>Energias de Portugal (EDP)</i>. My
+                                            role
+                                            involved providing end-user support operations and mobile device management
+                                            for
+                                            the
+                                            company's field technicians.
+                                        </p>
+                                        <h4>Technologies used:</h4>
+                                        <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/workspace-one.png"
+                                                    alt="Workspace One (AirWatch)">
+                                                <p class="mt-2">AirWatch</p>
+                                            </div>
+                                            <div class="text-center mt-2">
+                                                <img class="img-fluid" src="assets/tech_icons/intune.png" alt="Intune">
+                                                <p class="mt-2">Intune</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h4>Technologies used:</h4>
-                                    <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/azure.png" alt="Azure">
-                                            <p class="mt-2">Azure</p>
+
+                                    <hr><br>
+
+                                    <!-- SNIRH21 -->
+                                    <div class="row" id="Career-NTTData-SNIRH21">
+                                        <div class="proj-title">
+                                            <img src="assets/images/projects/career/internships/snirh21/icon.png"
+                                                alt="SNIRH21 icon">
+                                            <h3>SNIRH21</h3>
                                         </div>
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/entraid.png" alt="Entra ID">
-                                            <p class="mt-2">Entra ID</p>
-                                        </div>
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/defender.png"
-                                                alt="Defender for Cloud">
-                                            <p class="mt-2">Defender</p>
-                                        </div>
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/defender_easm.png"
-                                                alt="Defender EASM">
-                                            <p class="mt-2">EASM</p>
-                                        </div>
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/sentinel.png" alt="Sentinel">
-                                            <p class="mt-2">Sentinel</p>
-                                        </div>
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/dependency_track.png"
-                                                alt="Dependency Track">
-                                            <p class="mt-2">Dependency Track</p>
-                                        </div>
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/checkov.png" alt="Checkov">
-                                            <p class="mt-2">Checkov</p>
-                                        </div>
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/owasp_zap.png"
-                                                alt="OWASP ZAP">
-                                            <p class="mt-2">ZAP</p>
-                                        </div>
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/caido.png" alt="Caido">
-                                            <p class="mt-2">Caido</p>
+                                        <h4>A project for NTT Data</h4>
+                                        <p class="proj-description">
+                                            A software engineering project for a client in the public services sector -
+                                            Portugal's environmental protection agengy: <i>Agência Portuguesa do
+                                                Ambiente (APA)</i>, part of the Ministry of the Environment. Contributed
+                                            as an intern web developer. My role involved developing the front-end of the
+                                            platform backoffice, which aggregated data from an IoT sensor network in the
+                                            Tagus river in a unified monitoring portal for the agency's technicians.
+                                        </p>
+                                        <h4>Technologies used:</h4>
+                                        <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
+                                            <div class="text-center my-2">
+                                                <img class="img-fluid" src="assets/tech_icons/drupal.png" alt="Drupal">
+                                                <p class="mt-2">Drupal</p>
+                                            </div>
+                                            <div class="text-center my-2">
+                                                <img class="img-fluid" src="assets/tech_icons/bootstrap.png"
+                                                    alt="Bootstrap">
+                                                <p class="mt-2">Bootstrap</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- PROF-Internships -->
-                            <div class="tab-pane fade" id="list-PROF-Internships" role="tabpanel">
-                                <h2 class="proj-class-header">Internship projects</h2>
+                            <!-- Upskilling -->
+                            <div class="tab-pane fade" id="list-Upskilling" role="tabpanel">
+                                <h2 class="proj-class-header">Upskilling</h2>
                                 <hr class="proj-class-hr"><br>
 
-                                <!-- BUPi -->
-                                <div class="row" id="PROF-Internships-Avanade-BUPi">
-                                    <div class="proj-title">
-                                        <img src="assets/images/projects/internships/bupi/icon.png" alt="BUPi icon">
-                                        <h3>BUPi</h3>
-                                    </div>
-                                    <h4>A project for Avanade</h4>
-                                    <div class="proj-links">
-                                        <a href="https://bupi.gov.pt/"
-                                            class="col text-center btn btn-secondary my-2 code-link">WEBSITE</a>
-                                    </div>
-                                    <p class="proj-description">
-                                        An cloud engineering project for a client in the public services sector -
-                                        Portugal's land registry office: <i>Balcão Único do Prédio (BUPi)</i>, part of
-                                        the Ministry of Justice. Contributed as the primary cloud infrastructure
-                                        operator.
-                                        My role involved managing users, servers, networks, automations, dashboards, and
-                                        implementing security controls.
-                                    </p>
-                                    <h4>Technologies used:</h4>
-                                    <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/azure.png" alt="Azure">
-                                            <p class="mt-2">Azure</p>
-                                        </div>
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/entraid.png" alt="Entra ID">
-                                            <p class="mt-2">Entra ID</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr><br>
-
-                                <!-- EDP -->
-                                <div class="row" id="PROF-Internships-Avanade-EDP">
-                                    <div class="proj-title">
-                                        <img src="assets/images/projects/internships/edp/icon.png" alt="EDP icon">
-                                        <h3>EDP</h3>
-                                    </div>
-                                    <h4>A project for Avanade</h4>
-                                    <p class="proj-description">
-                                        A technical IT support service for a client in the utilities sector - Portugal's
-                                        largest electric utilities company: <i>Energias de Portugal (EDP)</i>. My role
-                                        involved providing end-user support operations and mobile device management for
-                                        the
-                                        company's field technicians.
-                                    </p>
-                                    <h4>Technologies used:</h4>
-                                    <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/workspace-one.png"
-                                                alt="Workspace One (AirWatch)">
-                                            <p class="mt-2">AirWatch</p>
-                                        </div>
-                                        <div class="text-center mt-2">
-                                            <img class="img-fluid" src="assets/tech_icons/intune.png" alt="Intune">
-                                            <p class="mt-2">Intune</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr><br>
-
-                                <!-- SNIRH21 -->
-                                <div class="row" id="PROF-Internships-NTTData-SNIRH21">
-                                    <div class="proj-title">
-                                        <img src="assets/images/projects/internships/snirh21/icon.png"
-                                            alt="SNIRH21 icon">
-                                        <h3>SNIRH21</h3>
-                                    </div>
-                                    <h4>A project for NTT Data</h4>
-                                    <p class="proj-description">
-                                        A software engineering project for a client in the public services sector -
-                                        Portugal's environmental protection agengy: <i>Agência Portuguesa do Ambiente
-                                            (APA)</i>, part of the Ministry of the Environment. Contributed as an intern
-                                        web developer. My role involved developing the front-end of the platform
-                                        backoffice, which aggregated data from an IoT sensor network in the Tagus river
-                                        in a unified monitoring portal for the agency's technicians.
-                                    </p>
-                                    <h4>Technologies used:</h4>
-                                    <div class="d-flex flex-wrap gap-3 justify-content-start tools-icons">
-                                        <div class="text-center my-2">
-                                            <img class="img-fluid" src="assets/tech_icons/drupal.png" alt="Drupal">
-                                            <p class="mt-2">Drupal</p>
-                                        </div>
-                                        <div class="text-center my-2">
-                                            <img class="img-fluid" src="assets/tech_icons/bootstrap.png"
-                                                alt="Bootstrap">
-                                            <p class="mt-2">Bootstrap</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ACAD-SelfEd -->
-                            <div class="tab-pane fade" id="list-ACAD-SelfEd" role="tabpanel">
-                                <h2 class="proj-class-header">Self-Education</h2>
-                                <hr class="proj-class-hr"><br>
-
-                                <div class="row" id="ACAD-SelfEd-Pentesting">
+                                <div class="row" id="Upskilling-EthicalHacking">
                                     <h3>Ethical Hacking</h3>
+                                    <p class="proj-description">
+                                        Completed Ethical Hacker course by Cisco
+                                        (<a
+                                            href="https://www.credly.com/badges/478925bf-0e99-4d13-ae6e-fd8d043cc2c7/public_url">
+                                            see badge
+                                        </a>).
+                                    </p>
+                                    <div class="row proj-gallery">
+                                        <img class="img-fluid col-md-12 my-1"
+                                            src="assets/images/projects/upskilling/in_ethical_hacking/screenshot_cisco_ethical_hacker.png"
+                                            alt="Cisco Ethical Hacker badge on Credly">
+                                    </div>
+                                    <br><br>
                                     <p class="proj-description">
                                         Completed learning paths in Burp Suite Academy.
                                     </p>
                                     <div class="row proj-gallery">
                                         <img class="img-fluid col-md-12 my-1"
-                                            src="assets/images/projects/self_ed/in_ethical_hacking/screenshot_burp_suite_academy.png"
+                                            src="assets/images/projects/upskilling/in_ethical_hacking/screenshot_burp_suite_academy.png"
                                             alt="Burp Suite Academy learning paths">
                                     </div>
                                 </div>
 
                                 <hr><br>
 
-                                <div class="row" id="ACAD-SelfEd-Pentesting">
+                                <div class="row" id="Upskilling-SysAdmin">
                                     <h3>System Administration & Security Engineering</h3>
                                     <p class="proj-description">
-                                        Acquired cloud administration and security engineering certifications by Microsoft.
+                                        Acquired cloud administration and security engineering certifications by
+                                        Microsoft
+                                        (<a
+                                            href="https://learn.microsoft.com/en-us/users/lusfelipesaraivabaptista/transcript/v0xmlt0yx54jn13">
+                                            see transcript
+                                        </a>).
                                     </p>
                                     <div class="row proj-gallery">
                                         <img class="img-fluid col-md-12 my-1"
-                                            src="assets/images/projects/self_ed/in_sysadmin/screenshot_ms_certs.png"
+                                            src="assets/images/projects/upskilling/in_sysadmin/screenshot_ms_certs.png"
                                             alt="Microsoft cloud security engineering certifications - fist set">
                                     </div>
                                 </div>
 
                                 <hr><br>
 
-                                <div class="row" id="PRSN-Summaries-EnterpriseIT">
-                                    <h3>General Notes on Enterprise IT</h3>
-                                    <h4>A set of summaries</h4>
+                                <div class="row" id="Upskilling-EnterpriseIT">
+                                    <h3>Enterprise IT</h3>
                                     <p class="proj-description">
-                                        Having learned tremendously about enterprise information technology at the start
-                                        of my professional career, I decided to write down the most important ideas
-                                        around DevOps and Cybersecurity in the corporate environment. With Windows and
-                                        Linux being the dominant operating systems at the time, I decided to learn a
-                                        little bit more about how they worked as well. I now share theses summaries with
-                                        you. Hope you find them useful!
+                                        A couple of summary documents covering foundational topics on enterprise IT,
+                                        namely DevOps and Cybersecurity, written in the beginning of my professional
+                                        career. Alongside them, a couple of other summaries covering the inner workings
+                                        of the Windows and Linux operating systems.
                                     </p>
                                     <div class="row proj-gallery">
                                         <img class="img-fluid col-md-3 my-1"
-                                            src="assets/images/projects/self_ed/in_enterprise_it/screenshot_windows.png"
+                                            src="assets/images/projects/upskilling/in_enterprise_it/screenshot_windows.png"
                                             alt="Summary of Windows Internals screenshot">
                                         <img class="img-fluid col-md-3 my-1"
-                                            src="assets/images/projects/self_ed/in_enterprise_it/screenshot_linux.png"
+                                            src="assets/images/projects/upskilling/in_enterprise_it/screenshot_linux.png"
                                             alt="Summary of Linux Insides screenshot">
                                         <img class="img-fluid col-md-3 my-1"
-                                            src="assets/images/projects/self_ed/in_enterprise_it/screenshot_devops.png"
+                                            src="assets/images/projects/upskilling/in_enterprise_it/screenshot_devops.png"
                                             alt="General Notes on Enterprise IT DevOps screenshot">
                                         <img class="img-fluid col-md-3 my-1"
-                                            src="assets/images/projects/self_ed/in_enterprise_it/screenshot_security.png"
+                                            src="assets/images/projects/upskilling/in_enterprise_it/screenshot_security.png"
                                             alt="General Notes on Enterprise IT Security screenshot">
                                     </div>
                                     <div class="row text-center mt-3">
@@ -693,25 +721,26 @@
                                 <br>
                                 <hr><br>
 
-                                <div class="row" id="PRSN-Summaries-Textbooks">
-                                    <h3>Summaries of CS textbooks</h3>
+                                <div class="row" id="Upskilling-Textbooks">
+                                    <h3>Computer Science</h3>
                                     <h4>A set of summaries</h4>
                                     <p class="proj-description">
-                                        Having developed a taste for reading computer science textbooks over the course
-                                        of my CS degree, I decided to compile the most important parts of some of the
-                                        ones I read, in order to quickly refer to their knowledge, and help me retain
-                                        their information over the years. I now share theses summaries with you. Please
-                                        buy the books if you find them useful!
+                                        A set of summaries covering foundational topics on computer science, compiled
+                                        over the course of my bachelor's degree. You can think of these as pocket
+                                        editions of some of the most reputable textbooks in the field, compiled with the
+                                        intent to make it easier to access their knowledge or memorize their information
+                                        content over the years. If you find them useful, consider supporting the
+                                        original authors by buying their books.
                                     </p>
                                     <div class="row proj-gallery">
                                         <img class="img-fluid col-md-4 my-1"
-                                            src="assets/images/projects/self_ed/in_computer_science/screenshot_1.png"
+                                            src="assets/images/projects/upskilling/in_computer_science/screenshot_1.png"
                                             alt="Title page screenshot">
                                         <img class="img-fluid col-md-4 my-1"
-                                            src="assets/images/projects/self_ed/in_computer_science/screenshot_2.png"
+                                            src="assets/images/projects/upskilling/in_computer_science/screenshot_2.png"
                                             alt="Contents page screenshot">
                                         <img class="img-fluid col-md-4 my-1"
-                                            src="assets/images/projects/self_ed/in_computer_science/screenshot_3.png"
+                                            src="assets/images/projects/upskilling/in_computer_science/screenshot_3.png"
                                             alt="Intro page screenshot">
                                     </div>
                                     <div class="row text-center mt-3">
@@ -723,15 +752,15 @@
                                 </div>
                             </div>
 
-                            <!-- ACAD-University -->
-                            <div class="tab-pane fade" id="list-ACAD-University" role="tabpanel">
-                                <h2 class="proj-class-header">University projects</h2>
+                            <!-- Academics -->
+                            <div class="tab-pane fade" id="list-Academics" role="tabpanel">
+                                <h2 class="proj-class-header">Academic projects</h2>
                                 <hr class="proj-class-hr"><br>
 
                                 <!-- Final project -->
-                                <div class="row" id="ACAD-University-FinalProject">
+                                <div class="row" id="Academics-FinalProject">
                                     <div class="proj-title">
-                                        <img src="assets/images/projects/university/final_project/icon.png"
+                                        <img src="assets/images/projects/academics/final_project/icon.png"
                                             alt="My Cardio icon">
                                         <h3>My Cardio</h3>
                                     </div>
@@ -752,13 +781,13 @@
                                     </p>
                                     <div class="row proj-gallery">
                                         <img class="img-fluid col-md-4 my-1"
-                                            src="assets/images/projects/university/final_project/screenshot_1.png"
+                                            src="assets/images/projects/academics/final_project/screenshot_1.png"
                                             alt="Final project app screenshot 1">
                                         <img class="img-fluid col-md-4 my-1"
-                                            src="assets/images/projects/university/final_project/screenshot_2.png"
+                                            src="assets/images/projects/academics/final_project/screenshot_2.png"
                                             alt="Final project app screenshot 2">
                                         <img class="img-fluid col-md-4 my-1"
-                                            src="assets/images/projects/university/final_project/screenshot_3.png"
+                                            src="assets/images/projects/academics/final_project/screenshot_3.png"
                                             alt="Final project app screenshot 3">
                                     </div>
                                     <h4>Technologies used:</h4>
@@ -787,7 +816,7 @@
                                 <hr><br>
 
                                 <!-- Artificial Intelligence 1 -->
-                                <div class="row" id="ACAD-University-ArtificialIntelligence">
+                                <div class="row" id="Academics-ArtificialIntelligence">
                                     <div class="proj-title">
                                         <h3>Machine Learning lab</h3>
                                     </div>
@@ -823,9 +852,9 @@
                                 <hr><br>
 
                                 <!-- Artificial Intelligence 2 -->
-                                <div class="row" id="ACAD-University-PullPrizes">
+                                <div class="row" id="Academics-PullPrizes">
                                     <div class="proj-title">
-                                        <img src="assets/images/projects/university/artificial_intelligence/icon.png"
+                                        <img src="assets/images/projects/academics/artificial_intelligence/icon.png"
                                             alt="Pull Prizes icon">
                                         <h3>Pull Prizes</h3>
                                     </div>
@@ -838,7 +867,7 @@
                                         Written in p5.js.
                                     </p>
                                     <div class="proj-gallery">
-                                        <img src="assets/images/projects/university/artificial_intelligence/graphs.png"
+                                        <img src="assets/images/projects/academics/artificial_intelligence/graphs.png"
                                             style="max-height: 125px; max-width: 100%;" alt="Pull Prizes graphs">
                                     </div>
                                     <div class="row text-center mt-3">
@@ -857,7 +886,7 @@
                                 <hr><br>
 
                                 <!-- Distributed Systems -->
-                                <div class="row" id="ACAD-University-DistributedSystems">
+                                <div class="row" id="Academics-DistributedSystems">
                                     <div class="proj-title">
                                         <h3>Highly Available App with MFA</h3>
                                     </div>
@@ -899,9 +928,9 @@
                                 <hr><br>
 
                                 <!-- Web Development -->
-                                <div class="row" id="ACAD-University-WebDevelopment">
+                                <div class="row" id="Academics-WebDevelopment">
                                     <div class="proj-title">
-                                        <img src="assets/images/projects/university/web_development/icon.png"
+                                        <img src="assets/images/projects/academics/web_development/icon.png"
                                             alt="Get Out There icon">
                                         <h3>Get Out There</h3>
                                     </div>
@@ -919,10 +948,10 @@
                                         PostgreSQL. Built in collaboration with Felipe Gomes, and William Santana.
                                     </p>
                                     <div class="row proj-gallery">
-                                        <img src="assets/images/projects/university/web_development/screenshot_mobile.png"
+                                        <img src="assets/images/projects/academics/web_development/screenshot_mobile.png"
                                             class="col-md-9 mobile-only"
                                             alt="Web Development project phone app screenshot">
-                                        <img src="assets/images/projects/university/web_development/screenshot_web.png"
+                                        <img src="assets/images/projects/academics/web_development/screenshot_web.png"
                                             class="col-md-9 desktp-only"
                                             alt="Web Development project web page screenshot">
                                     </div>
@@ -950,120 +979,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- ACAD-School -->
-                            <div class="tab-pane fade" id="list-ACAD-School" role="tabpanel">
-                                <h2 class="proj-class-header">School projects</h2>
-                                <h5>Recruiters, avert thy gaze.</h5>
-                                <hr class="proj-class-hr"><br>
-
-                                <!-- Processing Games -->
-                                <div class="row" id="ACAD-School-Processing">
-                                    <div class="proj-title">
-                                        <img src="assets/images/projects/school/games/icon.png" alt="Processing icon">
-                                        <h3>Processing</h3>
-                                    </div>
-                                    <h4>A creative coding project</h4>
-                                    <p class="proj-description">
-                                        A trio of computer games I wrote up over the summer after a creative coding
-                                        class in 9th grade. First time I ever programmed anything. Enjoy the games at
-                                        will but look at the code at you own risk.
-                                    </p>
-                                    <div class="proj-gallery">
-                                        <img src="assets/images/projects/school/games/screenshot_retro.png"
-                                            class="img-fluid col-md-3 my-1" alt="Retro screenshot">
-                                        <img src="assets/images/projects/school/games/screenshot_mrjam.png"
-                                            class="img-fluid col-md-3 my-1" alt="Mr. Jam screenshot">
-                                        <img src="assets/images/projects/school/games/screenshot_shapestatic.png"
-                                            class="img-fluid col-md-3 my-1" alt="ShapeStatic screenshot">
-                                    </div>
-                                    <div class="row text-center mt-3">
-                                        <a
-                                            href="https://drive.google.com/file/d/1t3kxwtQnF8_Ncsf5pB88dFtuZBDvZNLK/view?usp=sharing">
-                                            Start Playing
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <br>
-                                <hr><br>
-
-                                <!-- Painitngs -->
-                                <div class="row" id="ACAD-Art-Paintings">
-                                    <div class="proj-title">
-                                        <img src="assets/images/projects/school/paintings/icon.png"
-                                            alt="Cataclysm icon">
-                                        <h3>Cataclysm</h3>
-                                    </div>
-                                    <h4>An art project</h4>
-                                    <p class="proj-description">
-                                        A series of digital artworks.
-                                    </p>
-                                    <div class="row proj-gallery">
-                                        <img class="col-md-6 col-lg-3 my-1"
-                                            src="assets/images/projects/school/paintings/Iara 1.png" alt="Iara 1">
-                                        <img class="col-md-6 col-lg-3 my-1"
-                                            src="assets/images/projects/school/paintings/Iara 2.png" alt="Iara 2">
-                                        <img class="col-md-6 col-lg-3 my-1"
-                                            src="assets/images/projects/school/paintings/Kalopsia 1.png"
-                                            alt="Kalopsia 1">
-                                        <img class="col-md-6 col-lg-3 my-1"
-                                            src="assets/images/projects/school/paintings/Kalopsia 2.png"
-                                            alt="Kalopsia 2">
-                                        <img class="col-md-6 col-lg-3 my-1"
-                                            src="assets/images/projects/school/paintings/Nemesis 1.png" alt="Nemesis 1">
-                                        <img class="col-md-6 col-lg-3 my-1"
-                                            src="assets/images/projects/school/paintings/Nemesis 2.png" alt="Nemesis 2">
-                                        <img class="col-md-6 col-lg-3 my-1"
-                                            src="assets/images/projects/school/paintings/Firekeeper 1.png"
-                                            alt="Firekeeper 1">
-                                        <img class="col-md-6 col-lg-3 my-1"
-                                            src="assets/images/projects/school/paintings/Firekeeper 2.png"
-                                            alt="Firekeeper 2">
-                                    </div>
-                                    <div class="row text-center mt-3">
-                                        <a
-                                            href="https://drive.google.com/file/d/1ilKxcIRifhOpD7z6HT9_MXDWNqxmn3yd/view?usp=sharing">
-                                            See in HD
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <br>
-                                <hr><br>
-
-                                <!-- Poems -->
-                                <div class="row" id="ACAD-Art-Poem">
-                                    <h3>Among Other Nodes</h3>
-                                    <h4>An english literature project</h4>
-                                    <p class="proj-description">
-                                        A short poem about the dangers of technology misuse.
-                                    </p>
-                                    <div class="row proj-gallery">
-                                        <img class="col-md-6 col-lg-3 my-1"
-                                            src="assets/images/projects/school/poem/screenshot_1.png"
-                                            alt="Poem screenshot 1">
-                                        <img class="col-md-6 col-lg-3 my-1"
-                                            src="assets/images/projects/school/poem/screenshot_2.png"
-                                            alt="Poem screenshot 2">
-                                    </div>
-                                    <div class="row text-center mt-3">
-                                        <a
-                                            href="https://drive.google.com/file/d/1leGSMErvT4iS514dkI5MUT35niJZmB52/view?usp=sharing">
-                                            Start reading
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--
-                                <h3>Title</h3>
-                                <h4>Subtitle</h4>
-                                <p>
-                                    Description
-                                </p>
-                                <a href="">Link</a>
-                            -->
                         </div>
                     </div>
                 </div>
